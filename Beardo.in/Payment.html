@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../header and footer/header.css">
+    <title>Payment</title>
+    <link rel="stylesheet" href="./wallet/payment.css">
+    <script src="./header and footer/header-script.js"></script>
+    <style>
+           #abvimg{
+            display: block;
+            width:500px;
+            height:150px;
+            margin:auto;
+            margin-top:50px;
+        }
+              #header1{
+    position: fixed;
+    top:0;
+    right: 0;
+    left:0;
+
+}
+.topcircle{
+    width: 30px;
+    height:30px;
+    border-radius:15px;
+    border:1px solid #c80504;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    
+}
+.circleone+h3{
+    color:#c80504;
+}
+.circletwo,.circlethree{
+    border: 1px solid #c80504;
+    text-align: center;
+}
+.circletwo+h3{
+    color:#c80504;
+}
+.insidecircle2{
+    width:20px;
+    height:20px;
+     
+    border-radius: 50%;
+    color:#c80504;
+    
+
+
+}
+.insidecircle3{
+    width:20px;
+    height:20px;
+    background-color:#c80504;
+    border-radius: 50%;
+
+
+}
+.circleone{
+    color:#c80504;
+}
+#toptitle{
+    display: flex;
+    width:60%;
+    justify-content: space-between;
+    margin:auto;
+    margin-top:50px;
+    color: #c80504;
+    font-weight: 800;
+    
+    
+}
+#toptitle>div>div{
+    margin: 0 auto;
+}
+.line{
+    width:200px;
+    height:5px;
+    border-bottom: 3px solid #c80504;
+    margin-top: 12px;
+
+}
+
+.two{
+    border-bottom: 3px solid #c80504;
+}
+    </style>
+</head>
+<body>
+    
+    <div id="navbar"></div>
+    <img src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoiZnJlZS1za3UtMjVtbC5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsiZml0Ijoib3V0c2lkZSJ9fX0=" id="abvimg" alt="">
+
+    <div id="toptitle">
+
+        <div class="contchk">
+            <div class="topcircle circleone">
+                <div class="insidecircle1">
+                    ✓
+                </div>
+            </div>
+            <h3>Address</h3>
+        </div>
+        <div class="line one"></div>
+        <div class="contchk">
+            <div class="topcircle circletwo">
+                <div class="insidecircle2">
+                    ✓
+                </div>
+            </div>
+            <h3>Order Summery</h3>
+        </div>
+        <div class="line two"></div>
+        <div class="contchk">
+            <div class="topcircle circlethree">
+                <div class="insidecircle3">
+    
+                </div>
+            </div>
+            <h3>Payment</h3>
+        </div>
+    
+    </div>
+   
+    <div id="paymentcont">
+        <div id="left">
+            <h2 id="hlp">Payment</h2>
+            <div>
+                <div id="left-left">
+                    <div id="upi">
+                    <h4>Upi</h4>
+                    <div>
+                        <img src="https://pay.google.com/about/static_kcs/images/logos/footer-logo.svg" alt="">
+                        <img src="https://assetscdn1.paytm.com/frontendcommonweb/11272962.svg" alt="">
+                        <img src="https://www.logo.wine/a/logo/PhonePe/PhonePe-Logo.wine.svg" alt="">
+
+                    </div>
+                    </div>
+                    <div id="credit">
+                        <h4>Credit/Debit Card</h4>
+                        <div>
+                            <img src="https://cdn-icons-png.flaticon.com/128/349/349221.png" alt="">
+                            <img src="https://www.logo.wine/a/logo/Mastercard/Mastercard-Logo.wine.svg" alt="">
+                        </div>
+
+                    </div>
+                    <div id="netbanking">
+                        <h4>Net Banking</h4>
+                    </div>
+                    <div id="walletic">
+                        <h4>wallet</h4>
+                        <div>
+                            <img src="https://assetscdn1.paytm.com/frontendcommonweb/11272962.svg" alt="">
+                            <img src="https://www.logo.wine/a/logo/Bharti_Airtel/Bharti_Airtel-Logo.wine.svg" alt="">
+                            <img src="https://www.logo.wine/a/logo/Amazon_Pay/Amazon_Pay-Logo.wine.svg" alt="">
+                        </div>
+
+                    </div>
+                    <div id="credpay">
+                        <h4>Credpay</h4>
+                        <div>
+                            <img id="crd" src="https://web-images.credcdn.in/_next/assets/images/home-page/cred-logo-horizontal.png" alt="">
+                        </div>
+                    </div>
+                    <div id="simpl">
+                        <h4>simpl</h4>
+                        <div>
+                            <img src="https://getsimpl-website.s3.ap-south-1.amazonaws.com/assets/images/simpl-logo.svg" alt="">
+                        </div>
+                    </div>
+                    <div id="zest">
+                        <h4>Zest Pay</h4>
+                        <div>
+                            <img id="zestimg" src="https://assets.zestmoney.in/assets/customers/icons/Zest_logo_green.png" alt="">
+                        </div>
+                    </div>
+                    <div id="cashon">
+                        <h4>Cash On Delevery</h4>
+                        <p>
+                            Extra Rs50 will be charged for Cash on handling
+                        </p>
+                    </div>
+                </div>
+
+                <div id="left-right">
+<div id="upiappear">
+    <h4>UPI</h4>
+    <div id="upiimg">
+        <img src="https://pay.google.com/about/static_kcs/images/logos/footer-logo.svg" alt="">
+        <img src="https://assetscdn1.paytm.com/frontendcommonweb/11272962.svg" alt="">
+        <img src="https://www.logo.wine/a/logo/PhonePe/PhonePe-Logo.wine.svg" alt="">
+<h2>Other</h2>
+    </div>
+    
+<button id="paynow">Pay Now</button>
+
+</div>
+
+
+                </div>
+            </div>
+        </div>
+        <div id="right">
+            <div id="totalpay">
+                <h4 id="items">PRICE DETAILS (0 ITEM)</h4>
+                <div>
+                    <h3>subtotal</h3>
+                    <h3 id="subtotal"></h3>
+                
+                </div>
+                <div>
+                    <h3>Delivery Charges</h3>
+                    <h3>Free</h3>
+                </div>
+                <div>
+                    <h1>You Pay</h1>
+                    <h1 id="youpay">0</h1>
+                </div>
+                
+                <!-- <button id="continue">CONTINUE</button> -->
+                    </div>
+            
+        </div>
+    </div>
+
+</body>
+</html>
+<script type="module">
+  import { after_login,at_login,header,footer } from "./login_scripts/login_components.js"
+let header1 = document.getElementById("navbar");
+header1.innerHTML = header()
+
+var cartarr=JSON.parse(localStorage.getItem("cartdata")) || [];
+var total=localStorage.getItem("total")
+
+document.getElementById("items").innerText=`PRICE DETAILS (${cartarr.length} ITEM)`;
+document.getElementById("subtotal").innerText="₹ "+total;
+document.getElementById("youpay").innerText="₹ "+total;
+
+
+document.getElementById("paynow").addEventListener("click",()=>{
+    window.location.href="successfull.html"
+});
+document.getElementById("login_btn_on_header").addEventListener("click",()=>{
+    window.location.href="successfull.html"
+});
+
+document.getElementById("product").addEventListener("click",()=>{
+  window.location.href="product.html"
+})
+
+</script>

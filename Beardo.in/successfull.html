@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Successful</title>
+    <link rel="stylesheet" href="../header and footer/header.css">
+
+    <style>
+        #image>img{
+            width:100vw;
+            height:100vh;
+            display: block;
+            margin:auto;
+        }
+        #msg{
+            position: absolute;
+            top:0;
+            color: white;
+            font-size: 30px;
+            font-family: sans-serif;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            border:3px solid green;
+            padding: 10px;
+            border-radius: 10px;
+            height:fit-content;
+            width:30%;
+            margin:auto;
+            margin-top: 20%;
+            text-align: center;
+        }
+        #msg2{
+            color: white;
+            font-size: 30px;
+            font-family: sans-serif;
+            padding: 10px;
+            border-radius: 10px;
+            
+
+        }
+        #cont{
+            display:flex;
+            align-items: center;
+            height: 100px;
+            position: absolute;
+            top: 70%;
+            left:45%;
+            border:3px solid green;
+            padding: 10px;
+            border-radius: 10px;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar">    </div>
+    <div id="image">
+    <img src="https://cdn.dribbble.com/users/2140642/screenshots/4281297/media/854acd8656cd54e19d6ba758f806d6ff.gif" alt="">
+    <h2 id="msg">Your order Successful</h2>
+    <!-- <div id="cont">
+        <h2 id="msg2">Thank You  </h2> 
+        <img src="https://static.thenounproject.com/png/16972-200.png" alt="">
+    </div>
+    -->
+</body>
+</html>
+<script type="module">
+    import { header_new } from "../header and footer/header_new.js"
+let header1 = document.getElementById("navbar");
+header1.innerHTML = header_new()
+
+setTimeout(()=>{
+    window.location.href="../product.html";
+},5000)
+
+</script>

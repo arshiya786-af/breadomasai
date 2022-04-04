@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Login Beardo.in</title>
+    <link
+    rel="icon"
+    href="logo/who_we_are.png"
+    type="image/x-icon"
+    />
+    <link rel="stylesheet" href="login_style/login.css">
+    <link rel="stylesheet" href="login_style/loggedin.css">
+    <link rel="stylesheet" href="header and footer/header.css">
+    <link rel="stylesheet" href="header and footer/footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+<meta name="google-signin-client_id" content="443949716079-4l5at7o0if45d0kdqi7pp4n7n17n85tg.apps.googleusercontent.com">
+
+</head>
+<body id="login">
+    <div id="header">        
+    </div>
+    <div id="container"></div>
+    <div id="footer">
+    </div>
+<div id="fb-root"></div>
+</body>
+</html>
+
+
+
+<script type="module">
+
+import { after_login,at_login,header,footer } from "./login_scripts/login_components.js"
+
+let loggedin = localStorage.getItem("loggedin");
+let container = document.getElementById("container");
+
+let header_div = document.getElementById("header");
+let footer_div = document.getElementById("footer");
+
+header_div.innerHTML = header();
+footer_div.innerHTML = footer();
+
+
+if(loggedin==="true"){
+    container.innerHTML = after_login();
+}else if(loggedin==="false" || loggedin==null){
+    container.innerHTML = at_login();
+
+}
+
+</script>
+
+
+<script src="login_scripts/login.js" defer></script>
+<script type="module" src="login_scripts/loggedin.js" defer></script>
+
+
+<script defer>
+
+window.fbAsyncInit = function() {
+    FB.init({
+        appId   : '3127129737563913',
+        oauth   : true,
+        status  : true, // check login status
+        cookie  : true, // enable cookies to allow the server to access the session
+        xfbml   : true, // parse XFBML
+        version    : 'v13.0'
+    });
+
+  };
+
+function my_login(){
+    FB.login(function(response) {
+    console.log('response:', response)
+
+        if (response.authResponse) {
+            console.log('Welcome!  Fetching your information.... ');
+            
+            FB.api(
+              '/me',
+              'GET',
+              {"fields":"id,email,first_name,last_name"},
+              function(response) {
+                  // console.log('response:', response)
+                localStorage.setItem("fb_data",JSON.stringify(response))
+                localStorage.setItem("loggedin",true);
+                  window.location.reload();
+              }
+            );
+
+        } else {
+            //user hit cancel button
+            console.log('User cancelled login or did not fully authorize.');
+        }
+    });
+}
+
+function facebooklogout() {
+    try {
+        if (FB.getAccessToken() != null) {
+            FB.logout(function(response) {
+                // user is now logged out from facebook do your post request or just redirect
+                localStorage.removeItem("fb_data");
+                console.log('user logged out')
+                localStorage.setItem("loggedin",false)
+                window.location.reload();
+            });
+        } else {
+            // user is not logged in with facebook, maybe with something else
+            console.log("don't log out")   
+        }
+    } catch (err) {
+        console.log('err:', err)
+        // any errors just logout
+    }
+   }
+
+(function() {
+    var e = document.createElement('script');
+    e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
+    e.async = true;
+    document.getElementById('fb-root').appendChild(e);
+}());
+
+</script>
+
+
+
+<script src="https://apis.google.com/js/api:client.js" defer></script>
+<script type="text/javascript" defer>
+window.addEventListener("DOMContentLoaded",() =>{
+
+  var googleUser = {};
+var startApp = function() {
+  gapi.load('auth2', function(){
+    // Retrieve the singleton for the GoogleAuth library and set up the client.
+    auth2 = gapi.auth2.init({
+      client_id: '443949716079-4l5at7o0if45d0kdqi7pp4n7n17n85tg.apps.googleusercontent.com',
+      cookiepolicy: 'single_host_origin',
+      // Request scopes in addition to 'profile' and 'email'
+      //scope: 'additional_scope'
+    });
+    attachSignin(document.getElementById('customBtn'));
+  });
+};
+
+function attachSignin(element) {
+  auth2.attachClickHandler(element, {},
+      function(googleUser) {
+        //   console.log('googleUser:', googleUser)
+        localStorage.setItem("loggedin",true);
+        
+        var profile = googleUser.getBasicProfile();
+        let gobject = {
+        "ID" : profile.getId(),// Do not send to your backend! Use an ID token instead.
+        "Name": profile.getName(),
+        "Image_URL": profile.getImageUrl(),
+        "Email": profile.getEmail(), // This is null if the 'email' scope is not present.
+        "first_name" : profile.getGivenName(),
+        "last_name": profile.getFamilyName(),
+        }
+
+        localStorage.setItem("google_data",JSON.stringify(gobject));
+        window.location.reload();
+      }
+      , function(error) {
+        console.log('error:', error)
+        // alert(JSON.stringify(error, undefined, 2));
+      });
+}
+
+
+startApp();
+
+
+})
+
+
+function signOut() {
+gapi.auth2.getAuthInstance().signOut().then(function() {
+console.log('user signed out')
+localStorage.removeItem("google_data");
+localStorage.setItem("loggedin",false);
+window.location.reload();
+})
+}
+
+
+
+
+let normalsignout = () => {
+    localStorage.removeItem("normal_login")
+    localStorage.removeItem("fb_data")
+    localStorage.removeItem("token")
+    localStorage.setItem("loggedin",false);
+    window.location.reload();
+}
+
+</script>
+
+
+<script src="header and footer/header-script.js" defer></script>
+
+
+
+

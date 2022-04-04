@@ -1,0 +1,108 @@
+#adamount{
+    width:20%;
+    height:550px;
+    margin:auto;
+    background-color: black;
+    color:white;
+
+}
+#header1{
+    position:absolute;
+    top:0px;
+    left:0px;
+    right:0px;
+}
+#adamount{
+    padding: 0 30px;
+    margin:auto;
+    border-radius: 20px;
+    margin-top: 50px;
+    width: fit-content;
+    margin-bottom: 100px;
+}
+#adamount>div{
+    display: flex;
+    width: 100%;
+    justify-content:space-between;
+    align-items:center;
+}
+input{
+    width:95%;
+    height:30px;
+    display: block;
+    outline:none;
+    border:none;
+    border-radius:10px;
+    font-size:18px;
+    padding:0 10px;
+    
+}
+#card{
+    display:block;
+    margin:auto;
+    width:100px;
+    height:100px;
+}
+
+
+
+#exp>input,#cvv>input{
+    width:90%;
+    height:30px;
+    border-radius: 10px;
+}
+button{
+    width:200px;
+    height:50px;
+    background-color: white;
+    color: green;
+    font-weight:800;
+    font-size:larger;
+    display:block;
+    margin: auto;
+    margin-top:30px;
+    border:none;
+    border-radius: 20px;
+    
+}
+
+#otp{
+    width:20%;
+    background-color: black;
+    padding: 20px;
+    height:150px;
+    
+    position:absolute;
+    top:200px;
+    right:10px;
+    border-radius: 20px;
+    display:none;
+    
+}
+#otp>input{
+    width: 120px;
+    height:50px;
+    display:block;
+    margin: auto;
+    border-radius: 10px;
+}
+#otp>button{
+    width:120px;
+    height:50px;
+    display:block;
+    margin: auto;
+    margin-top:30px;
+    border-radius: 10px;
+    margin-top:30px;
+}
+#navbar{
+    background-color:black;
+}
+#Eamount,h3+input{
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+#paynow{
+    border-radius: 10px;
+    width:100%;
+}

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Summary</title>
+    <link rel="stylesheet" href="./wallet/summery.css">
+    <link rel="stylesheet" href="../header and footer/header.css">
+    <script src="../header and footer/header_new.js"></script>
+    <style>
+         #abvimg{
+            display: block;
+            width:500px;
+            height:150px;
+            margin:auto;
+            margin-top:50px;
+        }
+              #header1{
+    position: fixed;
+    top:0;
+    right: 0;
+    left:0;
+
+}
+.topcircle{
+    width: 30px;
+    height:30px;
+    border-radius:15px;
+    border:1px solid #c80504;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    
+}
+.circleone+h3{
+    color:#c80504;
+}
+.circletwo,.circlethree{
+    border: 1px solid gray;
+    text-align: center;
+}
+.circletwo+h3{
+    color:#c80504;
+}
+.insidecircle2{
+    width:20px;
+    height:20px;
+    background-color:#c80504;
+    border-radius: 50%;
+    
+
+
+}
+.insidecircle3{
+    width:20px;
+    height:20px;
+    
+    border-radius: 50%;
+
+
+}
+.circleone{
+    color:#c80504;
+}
+#toptitle{
+    display: flex;
+    width:60%;
+    justify-content: space-between;
+    margin:auto;
+    margin-top:50px;
+    color: gray;
+    font-weight: 800;
+    
+    
+}
+#toptitle>div>div{
+    margin: 0 auto;
+}
+.line{
+    width:200px;
+    height:5px;
+    border-bottom: 3px solid #c80504;
+    margin-top: 12px;
+
+}
+
+.two{
+    border-bottom: 3px solid gray;
+}
+#summerycont{
+    width:100%;
+}
+#left{
+    width:50%;
+}
+#left>div:first-child{
+    background-color: rgba(0,0,0,.06);
+    height: 70px;
+    padding: 10px;
+}
+#ttle>a{
+    color:#c80504;
+    font-weight:500;
+    text-decoration: none;
+    font-size:10px;
+}
+#ttle>h4{
+    margin:0;
+    font-size:14px;
+}
+#ttle{
+    display: flex;
+    /* align-items:center; */
+    justify-content: space-between;
+}
+#red{
+    background-color:#c80504;
+    color: white;
+    padding: 5px;
+    text-align:center;
+    margin-top: 20px;
+}
+    </style>
+</head>
+<body>
+    <div id="navbar"></div>
+    <img src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoiZnJlZS1za3UtMjVtbC5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsiZml0Ijoib3V0c2lkZSJ9fX0=" id="abvimg" alt="">
+
+    <div id="toptitle">
+
+        <div class="contchk">
+            <div class="topcircle circleone">
+                <div class="insidecircle1">
+                    ✓
+                </div>
+            </div>
+            <h3>Address</h3>
+        </div>
+        <div class="line one"></div>
+        <div class="contchk">
+            <div class="topcircle circletwo">
+                <div class="insidecircle2">
+    
+                </div>
+            </div>
+            <h3>Order Summary</h3>
+        </div>
+        <div class="line two"></div>
+        <div class="contchk">
+            <div class="topcircle circlethree">
+                <div class="insidecircle3">
+    3
+                </div>
+            </div>
+            <h3>Payment</h3>
+        </div>
+    
+    </div>
+    
+<div id="summerycont">
+    <div id="left">
+        <div>
+            <div id="ttle">
+                <h4>Shipping Address</h4>
+                <a href="">CHANGE</a>
+            </div>
+            <h3 id="adr"></h3>
+        </div>
+        <div id="red">
+            <h3>SPECIAL OFFER FOR YOU</h3>
+            <h4>Upto 75% off on our must try products.
+
+            </h4>
+        </div>
+        <div id="speciL">
+
+            <div id="products">
+
+            </div>
+
+
+
+        </div>
+    </div>
+    <div id="right">
+
+        <div>
+            <div>
+                <img src="https://beardoc.s3.ap-south-1.amazonaws.com/checkout/beardo-wallet-black.svg" alt="">
+    <h6>Beardo Wallet</h6>
+            </div>
+            
+    
+            <div>
+                <label id="switch" class="switch">
+                    <input type="checkbox" id="check" >
+                    <span class="slider round"></span>
+                  </label>
+            </div>
+    
+        </div>
+    <div id="coupon">
+        <div>
+            <img src="https://beardoc.s3.ap-south-1.amazonaws.com/checkout/tag.svg" alt="">
+        </div>
+        <div>
+            <input id="code" type="text" placeholder="Enter Coupon">
+        </div>
+        <button id="apply">Apply</button>
+    </div>
+
+    <div id="totalpay">
+        <h4 id="items">PRICE DETAILS (0 ITEM)</h4>
+        <div>
+            <h3>subtotal</h3>
+            <h3 id="subtotal"></h3>
+        
+        </div>
+        <div>
+            <h3>Delivery Charges</h3>
+            <h3>Free</h3>
+        </div>
+        <div>
+            <h1>You Pay</h1>
+            <h1 id="youpay">0</h1>
+        </div>
+        
+        <button id="continue">CONTINUE</button>
+            </div>
+    
+    </div>
+    
+</div>
+
+
+
+
+
+
+    <div id="footer"></div>
+</body>
+</html>
+<script type="module">
+ import { header_new } from "../header and footer/header_new.js"
+let header1 = document.getElementById("navbar");
+header1.innerHTML = header_new()
+
+
+// document.getElementById("footer").innerHTML=footer();
+var addresses=JSON.parse(localStorage.getItem("address_data")) || [];
+
+var obj=addresses[addresses.length-1] ;
+if(obj!=undefined){
+  var adress=document.getElementById("adr");
+  var str="D NO "+obj.flat+" "+obj.city+" "+obj.pincode+" "+obj.state;
+  adress.innerText=str;
+};
+var cartarr = JSON.parse(localStorage.getItem("cartdata")) || [];
+
+var arr=[
+    {
+        Discountstkr:"https://www.beardo.in/images/offerbadges/64.png",
+        image:"https://www.beardo.in/uploads/traveller-pouch-512x512-13027.png",
+        name:"New Traveller Pouch",
+        strike:"₹599",
+        price:"199",
+    },
+    {
+        Discountstkr:"https://www.beardo.in/images/offerbadges/82.png",
+        image:"https://www.beardo.in/uploads/beardo-pouch-512x512-7119.png",
+        name:" New Traveller Pouch",
+        strike:"₹550",
+        price:"99",
+    }
+]
+
+
+arr.forEach((elm)=>{
+    var div=document.createElement("div");
+    var image=document.createElement("img");
+    image.src=elm.Discountstkr;
+    var primage=document.createElement("img");
+    primage.src=elm.image;
+    var name=document.createElement("h3");
+    name.innerText=elm.name;
+    var prdiv=document.createElement("div");
+    var strk=document.createElement("strike");
+    strk.innerText=elm.strike;
+    var price=document.createElement("h2");
+    price.id="pricesp";
+    price="₹"+elm.price;
+    prdiv.append(strk,price);
+
+    var btn=document.createElement("button");
+    btn.innerText="Add To Cart";
+    btn.addEventListener("click",()=>{
+     cartarr.push(elm);
+     localStorage.setItem("cartdata",JSON.stringify(cartarr));
+     updateprice()
+    })
+
+    div.append(image,primage,name,prdiv,btn);
+    document.getElementById("products").append(div)
+
+});
+
+
+
+var total=0;
+function updateprice(){
+    cartarr.forEach((elm)=>{
+    total+=+elm.price;
+    var subtotal=document.getElementById("subtotal");
+    subtotal.innerText="₹ "+total;
+    var items=document.getElementById("items");
+    items.innerText=`PRICE DETAILS (${arr.length} ITEM)`;
+    var youpay=document.getElementById("youpay");
+    var inpu=document.getElementById("check");
+    youpay.innerText="₹ "+total;
+})
+}
+updateprice();
+
+document.getElementById("apply").addEventListener("click",()=>{
+    var code=document.getElementById("code").value;
+    if(code=="Masai30"){
+        total=Math.floor((total/100)*70);
+        var subtotal=document.getElementById("subtotal");
+    subtotal.innerText="₹ "+total;
+    var youpay=document.getElementById("youpay");
+    youpay.innerText="₹ "+total;
+    localStorage.setItem("total",total);
+        
+    }
+    
+});
+
+var wb=localStorage.getItem("wallet_balance");
+wb=+wb;
+
+document.getElementById("switch").addEventListener("click",()=>{
+    var check=document.getElementById("check");
+    if(check.checked==false && wb<total ){
+        total=total-wb;
+        if(total>0){
+        var subtotal=document.getElementById("subtotal");
+    subtotal.innerText="₹ "+total;
+    var youpay=document.getElementById("youpay");
+    youpay.innerText="₹ "+total;
+    wb=0;
+    localStorage.setItem("wallet_balance",wb);
+    localStorage.setItem("total",total);
+        }
+
+    }else if(check.checked==false && wb>total){
+        wb=wb-total;
+        localStorage.setItem("wallet_balance",wb);
+        total=0;
+        var subtotal=document.getElementById("subtotal");
+    subtotal.innerText="₹ "+total;
+    var youpay=document.getElementById("youpay");
+    youpay.innerText="₹ "+total;
+    localStorage.setItem("total",total);
+    }
+})
+
+document.getElementById("continue").addEventListener("click",()=>{
+    window.location.href="./Payment.html"
+})
+
+document.getElementById("product").addEventListener("click",()=>{
+  window.location.href="product.html"
+})
+
+</script>

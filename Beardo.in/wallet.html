@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../header and footer/header.css" />
+
+    <link rel="icon" href="logo/who_we_are.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../header and footer/footer.css" />
+    <title>Wallet .Beardo.in</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      #spin {
+        margin-top: 0px;
+      }
+      #spin + img {
+        display: block;
+        margin: auto;
+      }
+      #header1_input {
+        outline: none;
+        height: 25px;
+        font-size: 20px;
+      }
+      #signup {
+        width: 25%;
+        margin: 50px auto;
+        display: flex;
+      }
+
+      #signup > a {
+        /* display: inline-block; */
+        text-align: center;
+
+        color: white;
+        font-weight: 200;
+        /* width: 16%; */
+        margin: auto;
+        display: block;
+        width: 148px;
+        font-size: 10px;
+        padding: 8px 0;
+      }
+      #create {
+        background: linear-gradient(to bottom, #939393 0, #2c2c2c 100%);
+
+        text-decoration: none;
+      }
+      #create + a {
+        background: linear-gradient(to bottom, red 0, maroon 100%);
+
+        text-decoration: none;
+        margin: auto;
+      }
+      #Faq {
+        background-image: url("https://www.beardo.in/images/bg-image.jpg");
+        color: white;
+        padding: 20px;
+        /* margin: 50px 0; */
+        /* display: grid; */
+        /* justify-content: center; */
+        margin: 50px auto;
+      }
+      .btn {
+        display: flex;
+        justify-content: space-between;
+        width: 70%;
+        height: 50px;
+        background-color: #fff;
+        color: black;
+        font-weight: 800;
+        font-size: 30px;
+        box-shadow: inset 0px -20px 20px 6px #00000038;
+        padding: 0 10px;
+        align-items: center;
+        margin: 10px auto;
+        cursor: pointer;
+      }
+      #Faq > .answers {
+        width: 70%;
+        margin: auto;
+        color: #e5e5e5;
+        font-size: 24px;
+        font-weight: 300;
+      }
+      #Faq > .answers li {
+        line-height: 50px;
+        color: white;
+      }
+      #Faq > .answers > ul {
+        list-style-type: circle;
+      }
+
+      .answers h1 {
+        font-size: 20px;
+        font-weight: 900;
+        color: white;
+      }
+      .answers p {
+        font-size: 15px;
+        line-height: 25px;
+        margin-bottom: 20px;
+        color: white;
+      }
+      .answers {
+        display: none;
+      }
+
+      #btn:after {
+        content: "\02795"; /* Unicode character for "plus" sign (+) */
+        font-size: 13px;
+        color: #777;
+        float: right;
+        margin-left: 5px;
+      }
+      #footera {
+        height: 350px;
+        line-height: 30px;
+        padding: 50px;
+      }
+      #footer_form {
+        /* height:50px; */
+        padding: 1px;
+      }
+      #header1 {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+      }
+      #bal {
+        height: 300px;
+        display: none;
+      }
+
+      #bal > h4 {
+        color: black;
+        font-weight: 800;
+        margin-top: 130px;
+        padding: 20px;
+      }
+      #bal span {
+        color: red;
+      }
+      #bal > div {
+        margin: auto;
+        text-align: center;
+        width: 600px;
+        height: 100px;
+        /* padding:100px;  */
+        /* border-bottom: 0.5px  #898989; */
+        box-shadow: 0px 1px 0px rgb(0 0 0 / 20%);
+
+        display: grid;
+      }
+      #balance {
+        padding: 10px;
+        font-family: sans-serif;
+      }
+      #bal > div > h3 {
+        font-size: 12px;
+        font-weight: bold;
+        color: #898989;
+        opacity: 0.5;
+      }
+      #bal > div > h1 {
+        font-size: 38px;
+        font-weight: bold;
+      }
+      #adtowallet > button {
+        width: 200px;
+        height: 60px;
+        background-color: #2c2c2c;
+        color: white;
+        font-weight: 800;
+        font-family: sans-serif;
+        font-size: 20px;
+        border: none;
+        border-radius: 10px;
+        margin-left: 80%;
+        margin-bottom: 20px;
+        cursor: pointer;
+      }
+      #adtowallet {
+        display: none;
+      }
+      #navbar {
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <div id="main">
+      <img
+        src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy9iZWFyZG8tc2t5LWJhbm5lci0xNjAwLXgtMTIwLTA0LTM1MzEzLTEtMzg3MDguanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoxNjAwLCJoZWlnaHQiOjEsImZpdCI6Im91dHNpZGUifX19"
+        alt=""
+        id="spin"
+      />
+      <img
+        src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoiYmVhcmRvLXdhbGxldC1leHBsYWluZXItMS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsiZml0Ijoib3V0c2lkZSJ9fX0="
+        alt=""
+        id="src"
+      />
+
+      <div id="signup">
+        <a id="create" href="../login.html">Create An account</a>
+        <a href="../login.html">Login</a>
+      </div>
+      <div id="Faq">
+        <div class="btn" value="1">
+          <a>TERMS & CONDITION</a>
+          <h2>&plus;</h2>
+        </div>
+
+        <div class="answers">
+          <ul>
+            <li>
+              BEARDO WALLET holder needs to sign-up for Beardo Wallet with a
+              valid and active mobile number & email address, the wallet holder
+              shall ensure that the details entered are true and correct. Zed
+              Lifestyle reserves the right to terminate any wallet if it finds
+              that the details entered are false.
+            </li>
+            <li>
+              BEARDO WALLET is a reward points scheme and BEARDOCASH will be
+              credited to the wallet once the product has been delivered.
+            </li>
+            <li>
+              BEARDOCASH has the validity of 4 months from the date of issue.
+              Upon expiry of 4 months, the reward points will expire and wallet
+              holder can make no claim thereafter for any unutilized credit.
+            </li>
+            <li>Outstanding amount can be paid through COD & online.</li>
+            <li>
+              Beardo reserves the right to reject your request for BEARDO WALLET
+              without assigning any reason.
+            </li>
+            <li>
+              BEARDOCASH can be utilized only for purchasing goods and services
+              on beardo.in website and Beardo mobile application.
+            </li>
+            <li>
+              BEARDO WALLET services are controlled and operated from and in
+              India. Zed Lifestyle makes no representations that the Services
+              are appropriate for use in other locations. These Terms and
+              Conditions will be governed by the laws of India and all disputes
+              are subject to the exclusive jurisdiction of the Courts in
+              Ahmedabad, India.
+            </li>
+            <li>
+              BEARDO WALLET reward points are non-transferable to any other
+              BEARDO WALLET.
+            </li>
+            <li>
+              BEARDO WALLET is a reward points scheme and no cash withdrawal is
+              permissible on the BEARDO WALLET. Reward points cannot be
+              transferred to another wallet or to any bank account.
+            </li>
+            <li>
+              The BEARDO wallet holder shall ensure lawful use of the Wallet to
+              be utilised only for the purposes allowed under the scheme.
+            </li>
+            <li>
+              If you cancel your order or your order is cancelled, BEARDOCASH
+              that has been credited to your account will be debited.
+            </li>
+            <li>
+              Zed Lifestyle reserves the right to employ reasonable
+              technological and other methods to prevent abuse of the Offer
+              terms.
+            </li>
+            <li>
+              In addition to the above, this offer is also subject to Beardo’s
+              general Terms of Use.
+            </li>
+            <li>
+              Zed Lifestyle shall have the right to alter and amend the T&C at
+              any time, without prior notice to the wallet holder and the same
+              shall be applicable on the wallet holder from the time of such
+              amendment.
+            </li>
+            <li>
+              Zed Lifestyle reserves the right to DISCONTINUE the reward points
+              scheme at any time, without prior notice and no claims for any
+              points accrued survive after such discontinuation.
+            </li>
+            <li>
+              BEARDOCASH are the rewards accumulated in the rewards point scheme
+            </li>
+          </ul>
+        </div>
+        <div class="btn" value="2">
+          <a>FREQUENTLY ASKED QUESTIONS</a>
+          <h2>&plus;</h2>
+        </div>
+
+        <div class="answers">
+          <div>
+            <h1>How do I add BEARDOCASH to my Beardo Wallet?</h1>
+            <p>
+              You cannot add BEARDOCASH to your Beardo Wallet. You can only earn
+              it via your purchase (If a CASHBACK offer is applicable on that
+              order/product).
+            </p>
+          </div>
+          <div>
+            <h1>How can I check BEARDOCASH in my Beardo Wallet?</h1>
+            <p>
+              You can check your BEARDOCASH by following steps: 1. Login to your
+              account & select "My Account" 2. Select "My Beardo Wallet"
+            </p>
+          </div>
+          <div>
+            <h1>Can my BEARDOCASH expire?</h1>
+            <p>
+              The BEARDOCASH you earned on an order has a validity of 4 months,
+              it will be issued 48hrs after your order gets delivered. You will
+              be notified via sms & email.
+            </p>
+          </div>
+          <div>
+            <h1>Can I withdraw and transfer BEARDOCASH to my bank account?</h1>
+            <p>
+              You cannot withdraw BEARDOCASH from your Beardo Wallet to your
+              bank account. It can only be used to purchase products on
+              Beardo.in.
+            </p>
+          </div>
+
+          <div>
+            <h1>
+              Where would I receive refund if I placed an order through Beardo
+              Wallet?
+            </h1>
+
+            <p>
+              The refund amount will be reversed according to the payment method
+              used for the said transaction.
+            </p>
+          </div>
+
+          <div>
+            <h1>Can I use BEARDOCASH on other ecommerce sites?</h1>
+            <p>No. BEARDOCASH can't be used outside Beardo.in.</p>
+          </div>
+
+          <div>
+            <h1>I placed order but didn't receive BEARDOCASH as promised.</h1>
+            <p>
+              Please note that BEARDOCASH is credited after the delivery of the
+              products. You can contact our customer support team if you haven't
+              received BEARDOCASH after the delivery of your order.
+            </p>
+          </div>
+
+          <div>
+            <h1>Why cant I use BEARDOCASH on my order?</h1>
+            <p>
+              BEARDOCASH can be redeemed on certain products only, please check
+              if the products in your order are eligible for redemption.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="bal">
+      <h4>Home / <span>Beardo Wallet</span></h4>
+
+      <div>
+        <h3>TOTAL BALANCE</h3>
+        <h1 id="balance"></h1>
+      </div>
+    </div>
+    <div id="adtowallet"><button id="adbtn">Add To Wallet</button></div>
+
+    <div id="footer"></div>
+  </body>
+</html>
+<script type="module">
+  import { header_new } from "../header and footer/header_new.js";
+  let header1 = document.getElementById("navbar");
+  header1.innerHTML = header_new();
+  import { footer_new } from "../header and footer/footer_new.js";
+
+  // console.log(footer_new)
+
+  // document.getElementById("navbar").innerHTML=header()
+  document.getElementById("footer").innerHTML = footer_new();
+
+  var btn = document.getElementsByClassName("btn");
+  var answer = document.getElementsByClassName("answers");
+  btn[0].addEventListener("click", () => {
+    if (answer[0].style.display == "block") {
+      answer[0].style.display = "none";
+      document.querySelectorAll("h2")[0].innerHTML = "+";
+    } else {
+      answer[0].style.display = "block";
+      document.querySelectorAll("h2")[0].innerHTML = "-";
+    }
+    // console.log(answer[0])
+  });
+  btn[1].addEventListener("click", () => {
+    if (answer[1].style.display == "block") {
+      answer[1].style.display = "none";
+      document.querySelectorAll("h2")[1].innerHTML = "+";
+    } else {
+      answer[1].style.display = "block";
+      document.querySelectorAll("h2")[1].innerHTML = "-";
+    }
+    // console.log(answer[0])
+  });
+  var login = localStorage.getItem("loggedin");
+  var main = document.getElementById("main");
+  var bal = document.getElementById("bal");
+  var adtowallet = document.getElementById("adtowallet");
+  if (login === "false" || login === undefined) {
+    main.style.display = "block";
+  } else {
+    bal.style.display = "block";
+    main.style.display = "none";
+    adtowallet.style.display = "block";
+    // adtowallet.style.display="none";
+  }
+  var balance = localStorage.getItem("wallet_balance") || 0;
+  document.getElementById("balance").innerText = "₹" + balance;
+
+  document.getElementById("adbtn").addEventListener("click", () => {
+    window.location.href = "./addamount.html";
+  });
+
+  let product = document.getElementById("product");
+
+product.addEventListener("click", () => {
+  window.location.href = "product.html";
+})
+
+
+</script>
+
+<script src="header and footer/header-script.js"></script>

@@ -1,0 +1,337 @@
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  font-family: Heebo, sans-serif;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  margin: auto;
+  /* border: red solid; */
+}
+
+
+#register_div {
+  width: 100%;
+  display: flex;
+  padding: 0 100px;
+  margin: auto;
+  justify-content: center;
+}
+
+.formeffect .halfwidth,
+.fullwidth {
+  margin-bottom: 50px;
+  float: left;
+  min-height: 25px;
+}
+
+.fullwidth {
+  width: 100%;
+  position: relative;
+}
+
+input,
+select,
+textarea,
+button,
+a {
+  outline: none;
+  appearance: none;
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
+button,
+input {
+  outline: 0;
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.background-primary .newaccount__profile__detail__row__detail {
+  font-size: 14px;
+  color: #070707;
+  letter-spacing: .5px;
+  font-weight: 700;
+  text-transform: capitalize;
+  line-height: 18px;
+  word-break: break-all;
+}
+
+
+
+
+#account_div {
+  width: 84%;
+  margin: auto;
+  margin-top: 60px;
+  font-size: 24px;
+  font-family: Heebo, sans-serif;
+  /* margin-bottom: 30px; */
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 24px;
+  font-family: Heebo, sans-serif;
+}
+
+a,
+button,
+input[type="submit"],
+input[type="button"] {
+  cursor: pointer;
+}
+
+input,
+select,
+textarea,
+button,
+a {
+  outline: none;
+  appearance: none;
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+a {
+  text-decoration: none;
+}
+
+.thunder-ads img {
+  width: 100%;
+}
+
+.thunder-ads img.thunder-ads-desktop {
+  display: block;
+}
+
+#frmsignuperror {
+  margin: 0;
+}
+
+#loginformerror {
+  margin: 30px 0;
+}
+
+.breadcrumbs {
+  width: 87%;
+  margin: auto;
+  font-size: 13px;
+  font-family: Heebo, sans-serif;
+  font-weight: 500;
+  display: flex;
+  list-style: none;
+  color: rgb(0, 0, 0);
+  gap: 5px;
+}
+
+.breadcrumbs a:last-child {
+  color: #dc1618;
+}
+
+.register {
+  margin-right: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 30px;
+  width: 56%;
+  max-width: 800px
+}
+
+.login {
+  width: 30%;
+  max-width: 400px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 30px;
+}
+
+.login-reg,
+.reg-title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.login-reg,
+.reg-subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.login-reg input {
+  border-bottom: 1px solid #b5b5b5;
+  width: calc(100% - 20px);
+  background: 0 0;
+  z-index: 10;
+  line-height: 25px;
+  position: absolute;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+/* lable */
+.login-reg span {
+  color: #000;
+  opacity: 0.3;
+  position: absolute;
+  z-index: 0;
+  margin-top: 25px;
+  transition: all 0.1s ease-in-out;
+  width: calc(100% - 20px);
+}
+.login-reg .active span {
+  opacity: 1;
+  margin-top: 0;
+  transition: all 0.1s ease-in-out;
+  color: #dc1618;
+  z-index: 15;
+  font-size: 14px;
+}
+.login-reg label {
+  background-color: #dc1618;
+  height: 2px;
+  left: 40%;
+  position: absolute;
+  visibility: hidden;
+  width: 0;
+  bottom: -20px;
+}
+
+.login-reg .active label {
+  color: #dc1618;
+  visibility: visible;
+  width: 93%;
+  left: 0;
+  right: 0;
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* /// */
+
+/* google and facebook*/
+.social_login_custom {
+  display: flex;
+}
+
+.google-btn-custom {
+  flex: 1;
+}
+
+.fb-btn-custom {
+  flex: 1;
+  margin-right: 15px;
+}
+
+/* /// */
+
+.login-reg .halfwidth {
+  width: 50%;
+  float: left;
+  position: relative;
+  margin-bottom: 50px;
+  min-height: 25px;
+}
+.login-reg .black {
+  width: 100%;
+  max-width: 320px;
+}
+
+.login-reg .black {
+  color: #fff;
+  margin-right: 30px;
+  font-size: 16px;
+}
+.login-reg .black,
+.new-password-msg .black {
+  height: 50px;
+  background-color: #000;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.login-reg .forgot-pswd {
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.login-reg .error,
+.login-reg .forgot-pswd {
+  color: #dc1618;
+  font-size: 13px;
+  margin-bottom: -10px;
+}
+.black,
+.login .black,
+.new-password .black {
+  margin-bottom: 15px !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* address */ 
+
+.background-primary .newaccount .address-radio__name {
+  font-size: 0.875rem;
+  text-transform: capitalize;
+}
+
+.oldaddress-detail__row {
+  margin-top:20px;
+}
+
+.oldaddress-detail__row .address-radio__name {
+  font-weight: 500;
+  margin-bottom: 16px;
+  color: #070707;
+}
+
+.background-primary .newaccount .address-radio p {
+  font-size: 0.855rem;
+  text-transform: capitalize;
+  letter-spacing: .25px;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+.oldaddress-detail__row .address-radio p {
+  margin-bottom: 16px;
+  color: #5b5b5b;
+}
+
+.oldaddress-detail__row .address-radio p.address-radio__contact span {
+  color: #5b5b5b;
+  font-weight: 400;
+}
+
+.oldaddress-detail__row__edit {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  color: #c80504;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+}

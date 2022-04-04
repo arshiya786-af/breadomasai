@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEARCH YOUR PRODUCT</title>
+    <link rel="stylesheet" href="./search.css">
+    <link
+    rel="icon"
+    href="logo/who_we_are.png"
+    type="image/x-icon"
+    />
+</head>
+<body id="comeedy">
+    <div id="mcontainer">
+        <div id="kichh"></div>
+        <div id="searchbar">
+            <input type="text" placeholder="Search for a Product" id="searchproduct"/>
+            <div id="cross" >&#10006</div>
+        </div>
+        <br>
+        <div id="browse">
+            <p id="bc">Browse Categories</p>
+            <br>
+            <div id="sitems"></div>
+        </div>
+        <br>
+        <div id="magic">
+            <p id="tp">Trending Products</p>
+            <div id="scrollingdivs"></div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script type="module">
+
+
+document.getElementById("cross").addEventListener("click", function(){
+    window.location.href="./index.html";
+})
+
+    import { facedata } from "./components/searchdata.js";
+    console.log(facedata);
+
+    let parent = document.getElementById("sitems");
+
+    const append = ( sitems, facedata ) =>{
+        parent.innerHTML = null;
+
+        facedata.forEach(({ img_url, name }) => {
+            let mdiv = document.createElement('div');
+            mdiv.setAttribute('id', 'mdiv');
+
+            let image = document.createElement("img");
+            image.src = img_url;
+            image.setAttribute('id', 'image');
+
+            let title = document.createElement("h5");
+            title.innerText = name;
+            title.setAttribute('id', 'title');
+
+            mdiv.append(image, title);
+            parent.append(mdiv);
+        })
+    }
+
+    append(sitems, facedata);
+
+    import { mostWantedCombosProdObj } from "./components/cartdata.js";
+    console.log(mostWantedCombosProdObj);
+
+    let parent1 = document.getElementById('scrollingdivs')
+
+    const scroll = (scrollingdivs, mostWantedCombosProdObj) => {
+        parent1.innerHTML = null;
+        mostWantedCombosProdObj.forEach((  {imageUrl, name, discountSticker, price, cutPrice} ) => {
+
+            let div = document.createElement("div");
+        div.setAttribute('id', 'minicontainer');
+
+        let img = document.createElement("img");
+        img.src = imageUrl;
+        img.setAttribute("id", "pic");
+
+
+        let title = document.createElement("h2");
+        title.innerText = name;
+        title.setAttribute('id', 'brand');
+
+
+        let strikeOffPrice = document.createElement("img");
+        strikeOffPrice.src = discountSticker;
+        strikeOffPrice.setAttribute('id', 'disc');
+
+       
+
+        let mainPrice = document.createElement("h5");
+        mainPrice.innerText = price
+        mainPrice.setAttribute('id', 'price');
+
+        let cutOffPrice = document.createElement("h5");
+        cutOffPrice.setAttribute('id', 'cutoffprice');
+        
+
+
+
+        let button = document.createElement("button");
+        button.innerText = `ADD TO CART`
+        button.setAttribute('id', 'addtocart');
+        
+        
+        div.append(img, title, cutOffPrice, mainPrice, button);
+        parent1.append(div);
+    }) 
+    }
+    scroll(scrollingdivs, mostWantedCombosProdObj);
+
+
+
+
+</script>
+
+<script type="module">
+    import { searcharr } from "./components/searchdata.js";
+
+    import {hourlyPrizeObj, faceEssentialsProdObj, mostWantedCombosProdObj1, backgroundImageObj, singleObj, topSellersProdObj, slide1Obj} from "./components/searchdata.js";
+    var products = document.getElementById("searchproduct");
+    products.addEventListener("keydown", function(e){
+        if(e.code == "Enter"){
+            validate(e);
+        }
+    });
+
+
+    document.getElementById("mdiv").addEventListener("click", function(hourlyPrizeObj){
+        validate(hourlyPrizeObj);
+    });
+
+    document.getElementById("sitems").addEventListener("click", function(hourlyPrizeObj){
+        validate(hourlyPrizeObj);
+    })
+
+    
+    function validate(e){
+       
+
+        let parent = document.getElementById("browse");
+        parent.innerHTML = null;
+        kichh.style.background= "black"
+        searcharr.forEach(( { imageUrl, name, cutPrice, price }) =>{
+
+            // let button1 = document.createElement('button');
+            // button.innerText = `<-HOME`;
+            // button.addEventListener("click", function(){
+            //     window.location.href = "./index.html"
+            // })
+
+
+            let div = document.createElement("div");
+            div.setAttribute('id', 'mycontainer');
+
+            let img = document.createElement("img");
+            img.src = imageUrl;
+            img.setAttribute("id", "myimage");
+
+            let title = document.createElement("h2");
+            title.innerText = name;
+            title.setAttribute('id', 'myname');
+
+            let mainPrice = document.createElement("h5");
+            mainPrice.innerText = price;
+            mainPrice.setAttribute('id', 'myprice');
+
+            let cutOffPrice = document.createElement("h5");
+            cutOffPrice.innerText = cutPrice;
+            cutOffPrice.setAttribute('id', 'mycutoffprice');
+
+            let button = document.createElement("button");
+            button.innerText = `ADD TO CART`
+        button.setAttribute('id', 'myaddtocart');
+        button.addEventListener("click", function(){
+            console.log(arr);
+            var arr = JSON.parse(localStorage.getItem("cartdata")) || []; 
+            
+            var obj = {};
+            obj.name = name;
+            obj.price = price;
+            obj.cutPrice = cutPrice;
+            obj.img_url = imageUrl;
+            obj.qty = 1;
+
+            arr.push(obj);
+            console.log(arr);
+            localStorage.setItem("cartdata", JSON.stringify(arr));
+            alert(`ITEM ADDED TO CART`);
+            location.reload();
+
+        });
+       
+
+            div.append(img, title, mainPrice, button);
+            kichh.append(div);
+        }) 
+    }
+
+    var arr = JSON.parse(localStorage.getItem("cartdata")) || [];
+    console.log(arr);
+    
+    function cartdata(cartdata){
+        arr.push(cartdata)
+    localStorage.setItem("cartdata", JSON.stringify(arr));
+    location.reload();
+    }
+
+</script>
+

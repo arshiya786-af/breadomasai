@@ -1,0 +1,118 @@
+.same input{
+    display: block;
+    outline:none;
+    border: none;
+    overflow: hidden;
+   
+    
+}
+label{
+    display:block;
+    margin: 5px;
+    color:#c80504;
+    font-weight: 100;
+    font-size:small;
+}
+.same{
+    margin: 10px;
+}
+.same div{
+    padding-bottom: 10px;
+    border-bottom: 2px solid black;
+}
+
+#adgridone{
+    display:grid;
+    grid-template-columns:150px 150px 300px;
+    gap:20px;
+}
+#adgridtwo{
+    display:grid;
+    grid-template-columns:300px 150px 150px;
+    gap:20px;
+}
+#adgridthree{
+    display:grid;
+    grid-template-columns:300px 300px;
+    gap:20px;
+}
+#adgridthree select{
+outline: none;
+width: 300px;
+border: none;    
+}
+#adgridfour{
+    display:grid;
+    grid-template-columns:300px 300px;
+    gap:20px;
+}
+
+#adtype{
+    display:flex;
+    align-items:center;
+    border-radius: 20px;
+    text-align:justify;
+    margin-left: 20px;
+}
+
+.labelinp{
+    border:1px solid #c80504;
+    padding:10px 40px;
+    margin: 0px;
+    color: gray;
+    cursor: pointer;
+    transition: background 0.2;
+}
+#lbone{
+   border-top-left-radius:8px ;
+   border-bottom-left-radius:8px ;
+}
+#lbthree{
+    border-top-right-radius:8px ;
+    border-bottom-right-radius:8px ;
+ }
+ h2:first-child{
+      /* text-align: center; */
+     /* width: 650px; */
+     color: gray;
+     font-weight:100;
+     font-size:medium;
+     padding:10px;
+     border-bottom:1px solid gray;
+ }
+ #addressdiv{
+     width: 70%;
+     display: grid;
+     border:1px solid gray;
+     padding-bottom: 20px;
+ }
+ #addresscont{
+     width: 70%;
+     display: flex;
+     justify-content:space-between;
+     margin: auto;
+     margin-bottom: 100px;
+ }
+ #totalpay{
+     border:1px solid gray;
+     height: 350px;
+     width: 30%;
+     padding:20px;
+
+ }
+ #totalpay>div{
+   display:flex;
+   justify-content: space-between;
+ }
+ #continue{
+     width: 300px;
+     height: 50px;
+     margin:auto;
+     display: block;
+     background-color:#c80504;
+     color: white;
+     font-weight:900;
+     border:none;
+     border-radius:10px;
+     margin-top: 30px;
+ }

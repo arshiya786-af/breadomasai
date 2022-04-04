@@ -1,0 +1,151 @@
+#upi>div>img{
+    width:50px;
+    height:30px;
+}
+#upi{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#paymentcont{
+    width:70%;
+    margin:auto;
+    display: flex;
+    margin-bottom:100px;
+}
+#left{
+    width:70%;
+    border: 1px solid rgba(0,0,0,.29);
+    padding:10px;
+}
+#left-left{
+    width: 50%;
+    border:1px solid rgba(0,0,0,.059);
+    border-right: none;
+    padding:5px;
+}
+#left-left>div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0,0,0,.059);
+    border-right: 1px solid rgba(0,0,0,.059);
+    padding: 0 15px;
+}
+#left-left>div>div>img{
+    width:50px;
+    height:50px;
+}
+#credpay>div{
+    background-color:black;
+    width:100px;
+    padding:5px;
+    border-radius: 5px;
+}
+#credpay>div>#crd{
+    width:100px;
+    display: block;
+    margin: auto;
+    height: 25px;
+}
+#zest>div>#zestimg{
+    height:30px;
+}
+#cashon>p{
+    width:30%;
+    color:#c80504;
+    font-size: 10px;
+}
+#left>div{
+    display: flex;
+    justify-content:space-between;
+}
+#left-right{
+    width:50%;
+}
+#upiappear>div{
+    display: grid;
+    width: 100%;
+    
+    grid-template-columns:repeat(2,1fr);
+    justify-content: space-around;
+
+
+    
+    
+}
+#upiappear{
+    margin: auto;
+    /* text-align:center; */
+    width:100%;
+}
+#upiappear img{
+    width:100px;
+    height:40px;
+    border: 1px solid black;
+    padding: 0 5px;
+    margin: 10px;
+    border-radius:5px;
+
+}
+
+#upiappear>h4{
+    padding-bottom: 10px;
+       border-bottom: 1px solid rgba(0,0,0,.59);
+}
+#upiappear h2{
+    width:100px;
+    /* height:50px; */
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 15px;
+}
+#paynow{
+    background-color:#c80504;
+    color:white;
+    width: 100%;
+    height:50px;
+    font-size: 20px;
+    font-family:sans-serif;
+    border: none;
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+    font-weight: 800;
+}
+#hlp{
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+    
+}
+#navbar{
+    background-color:black;
+}
+#totalpay{
+    /* border:1px solid gray; */
+    /* height: 300px; */
+    width: 270px;
+    padding:20px;
+    margin-left: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+
+
+}
+#totalpay>div{
+  display:flex;
+  justify-content: space-between;
+}
+/* #continue{
+    width: 250px;
+    height: 50px;
+    margin:auto;
+    display: block;
+    background-color:#c80504;
+    color: white;
+    font-weight:900;
+    border:none;
+    border-radius:10px;
+    margin-top: 20px;
+} */

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add To Wallet</title>
+    <link rel="stylesheet" href="./wallet/addamount.css">
+    <link rel="stylesheet" href="./header and footer/header.css">
+</head>
+<body>
+    <div id="navbar">
+    </div>
+    
+
+    <div id="adamount">
+        <img id="card" src="https://cdn-icons-png.flaticon.com/128/147/147258.png" alt="">
+        <input id="Eamount" required type="text" placeholder="Enter Amount in ₹">
+        <h3>Card Number</h3>
+        <input required type="text" placeholder="Enter Card Number">
+        <h3>Card Owner Name</h3>
+        <input required type="text" placeholder="Enter Name as on the card">
+       <div>
+           <div id="exp">
+               <h3>Expiry</h3>
+               <input required type="text" placeholder="Enter Expiry">
+           </div>
+           <div id="cvv">
+               <h3>Cvv</h3>
+               <input required type="text" placeholder="Enter Cvv">
+           </div>
+       </div>
+       <button id="paynow">Pay</button>
+
+
+    </div>
+
+   <div id="otp">
+       <input id="Eotp" type="password" placeholder="Enter Otp">
+       <button id="submit">Submit</button>
+   </div>
+
+</body>
+</html>
+<script type="module">
+     import { header_new } from "./header and footer/header_new.js"
+let header1 = document.getElementById("navbar");
+header1.innerHTML = header_new()
+
+
+
+
+    var adbal=0;
+    var wb=localStorage.getItem("wallet_balance");
+    wb=+wb;
+
+document.getElementById("paynow").addEventListener("click",()=>{
+    var val=document.getElementById("Eamount").value;
+    adbal=+val;
+    document.getElementById("otp").style.display="block";
+    alert("Enter otp")
+
+});
+
+
+document.getElementById("submit").addEventListener("click",()=>{
+    var valu=document.getElementById("Eotp").value;
+    if(valu=="1234"){
+        adbal+=wb;
+        localStorage.setItem("wallet_balance",adbal);
+        window.location.href="./wallet.html";
+    }else{
+        alert("wrong otp try again")
+    }
+    
+
+});
+
+document.getElementById("product").addEventListener("click",()=>{
+  window.location.href="product.html"
+})
+
+</script>

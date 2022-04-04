@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CART  beardo.in</title>
+    <link
+    rel="icon"
+    href="logo/who_we_are.png"
+    type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./cart.css">
+    <style>
+        *{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #navbar{
+            margin-left: -8px;
+        }
+        #cart{
+            margin: auto;
+            width: 1200px;
+            margin-top: 160px;
+            
+        }
+        #noitems{
+            text-align:center; 
+            font-size: 32px; 
+            color: rgb(182, 179, 179); 
+        }
+        #recommended{
+            margin: auto;
+            width: 800px;
+            height: 500px;
+            text-align: center;
+            display: flex;
+
+        }
+        #deliverycheck{
+            font-size: 16px;
+            margin:auto;
+            margin-top: 50px;
+            width: 700px;
+            display: flex;
+            justify-content: space-between;
+            background-color: rgba(0,0,0,.059);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        #pincode_div {
+            background-color: #fff;
+            position: relative;
+            border-radius: 5px 5px 5px 5px;
+            height: 30px;
+            max-width: 165px;
+            margin-right: 70px;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+        }
+        
+        #check {
+            border: none;
+            color: #070707;
+            padding: 10px;
+            width: 100%;
+            padding-right: 60px;
+            border-radius: 5px;
+            height: 100%;
+            outline: none;
+        }
+
+        #check_btn {
+            color: #c80504;
+            font-size: 17px;
+            font-weight: 700;
+            position: relative;
+            top:-115%;
+            right: -110%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+        #pincode_span {
+            color: #c80504;
+            font-size: 17px;
+            font-weight: 700;
+            position: relative;
+            top:0;
+            right: 0;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+        #header1_input{
+            outline: none;
+            font-size: 20px;
+        }
+        #search_input_div{
+            margin-right: 100px;
+        }
+        .productDiv{
+            width: 250px;
+            height: 90%;
+            border: 1px solid red;
+        }
+        .productImage{
+            width: 20%;
+        }
+        .addtocartbutton{
+            background: red;
+            color: white;
+        }
+        #cartdown{
+            margin: auto;
+            width: 1100px;
+            height: 600px;
+        }
+        h2{
+            text-align: center;
+            font-size: 28px;
+        }
+        #dummy{
+            color: rgb(92, 88, 88);
+        }
+        #nothing{
+            height: 50px;
+        }
+        #going{
+            width: 400px;
+            margin-left: 420px;
+        }
+        #main1{
+            width: 700px;
+        }
+        #main2{
+            width: 400px;
+        }
+        #kuii{
+            display: flex;
+        }
+        #cutoffprice{
+            text-decoration: line-through;
+        }
+
+        #after_pincode {
+            font-size: 16px;
+            margin:auto;
+            margin-top: 50px;
+            width: 700px;
+            display: block;
+            justify-content: space-between;
+            background-color: rgba(0,0,0,.059);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="navbar"></div>
+    <br>
+    <div id="cart">
+         <h4 id="noitems">No Items In The Cart &#9785</h4>
+        <img  id="going" src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidmlwL3ZpcC1saW1pdGVkLW9mZmVyLWJhbm5lci5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsiZml0Ijoib3V0c2lkZSJ9fX0=">
+        <!-- <div id="extra"><script src="./cart.js"></script></div>  -->
+        <div id="kuii">
+            <div id="main1"></div>
+        <div id="main2"></div>
+        </div>
+        <script src="./cart.js"></script>
+     </div>
+    
+<div ID="cartdown">
+        <h2>RECOMMENDED</h2>
+        <div id="recommended"></div>
+    </div> 
+
+    <div id="deliverycheck">
+        <p style="margin-left: 10px; color: #000">Estimated Delivery Date</p>
+        <div id="pincode_div">
+            <input id="check" type="number" , placeholder="Pincode" />
+            <span id="check_btn">check</span>
+        </div>
+    </div>
+    <div id="nothing"></div>
+    </body>
+</html>
+
+<script type="module">
+    import header from "./components/header1.js";
+    let cartHeader = document.getElementById('navbar');
+    cartHeader.innerHTML = header();
+
+    import { mostWantedCombosProdObj } from "./components/cartdata.js";
+    
+    let parent = document.getElementById("recommended");
+
+    const append = (recommended, parent) => {
+    parent.innerHTML = null;
+
+    mostWantedCombosProdObj.forEach(( {  imageUrl, name, discountSticker, price, cutPrice } ) =>{
+        let div = document.createElement("div");
+        div.style.marginRight = "18px";
+        div.style.marginTop = "10px";
+        div.style.backgroundColor = "white";
+        div.style.borderRadius = "5px";
+        div.style.border = "1px solid rgb(233, 229, 229)";
+        div.setAttribute('id', 'minicontainer');
+
+        let img = document.createElement("img");
+        img.src = imageUrl;
+        img.width = "200";
+        img.setAttribute("id", "image");
+
+
+        let title = document.createElement("h2");
+        title.innerText = name;
+        title.style.fontSize = "16px";
+        title.style.color = "rgb(168, 161, 161)";
+        title.setAttribute('id', 'name');
+
+
+        let strikeOffPrice = document.createElement("img");
+        strikeOffPrice.src = discountSticker;
+        strikeOffPrice.setAttribute('id', 'disc');
+
+       
+
+        let mainPrice = document.createElement("h5");
+        mainPrice.innerText = price;
+        mainPrice.style.color = "red";
+        mainPrice.style.fontSize= "24px";
+        mainPrice.setAttribute('id', 'price');
+
+        let cutOffPrice = document.createElement("h5");
+        cutOffPrice.innerText = cutPrice;
+        cutOffPrice.style.color = "rgb(92, 88, 88)";
+        cutOffPrice.style.fontSize = "18px";
+        cutOffPrice.setAttribute('id', 'cutoffprice');
+        
+
+
+
+        let button = document.createElement("button");
+        button.setAttribute('id', 'addtocart');
+        button.innerText = `ADD TO CART`;
+        button.style.backgroundColor = "red";
+        button.style.color = "white";
+        button.style.width = "100%";
+        button.style.height = "50px";
+        button.style.borderRadius = "2px";
+        button.style.fontStretch = "20px";
+        button.style.border = "none";
+        button.style.fontSize = "18px";
+        button.style.fontWeight = "bold";
+        
+        
+
+
+        
+        
+        
+        div.append(img, title, cutOffPrice, mainPrice, button);
+        parent.append(div);
+    }) 
+    
+}
+
+    append(recommended, parent);
+
+
+    
+
+    function validate(e){
+        let expected = document.getElementById('nothing');
+        expected = null;
+        const d = new Date();
+
+        let date = document.createElement('div');
+        date.innerText = d;
+        date.setAttribute('id', 'date');
+        nothing.append(date);
+    }
+    
+    let address_data = JSON.parse(localStorage.getItem("address_data"));
+
+    let deliverycheck = document.getElementById("deliverycheck");
+
+    if(address_data!==null){
+        deliverycheck.innerText = null;
+        
+        let upper_div = document.createElement("div");
+        upper_div.style.display = "flex";
+        upper_div.style.justifyContent = "space-between";
+
+        let first_p = document.createElement("p");
+
+        let last_p = document.createElement("p");
+        last_p.addEventListener("click", () => {
+
+        })
+
+        first_p.innerHTML = `We delivered to <span id="pincode_span">${address_data[0].pincode}</span>.`
+
+        last_p.innerHTML= '<svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 484.00019 484" width="16"><path fill="#c80504" d="m401.648438 18.234375c-24.394532-24.351563-63.898438-24.351563-88.292969 0l-22.101563 22.222656-235.269531 235.144531-.5.503907c-.121094.121093-.121094.25-.25.25-.25.375-.625.746093-.871094 1.121093 0 .125-.128906.125-.128906.25-.25.375-.371094.625-.625 1-.121094.125-.121094.246094-.246094.375-.125.375-.25.625-.378906 1 0 .121094-.121094.121094-.121094.25l-52.199219 156.96875c-1.53125 4.46875-.367187 9.417969 2.996094 12.734376 2.363282 2.332031 5.550782 3.636718 8.867188 3.625 1.355468-.023438 2.699218-.234376 3.996094-.625l156.847656-52.324219c.121094 0 .121094 0 .25-.121094.394531-.117187.773437-.285156 1.121094-.503906.097656-.011719.183593-.054688.253906-.121094.371094-.25.871094-.503906 1.246094-.753906.371093-.246094.75-.621094 1.125-.871094.125-.128906.246093-.128906.246093-.25.128907-.125.378907-.246094.503907-.5l257.371093-257.371094c24.351563-24.394531 24.351563-63.898437 0-88.289062zm-232.273438 353.148437-86.914062-86.910156 217.535156-217.535156 86.914062 86.910156zm-99.15625-63.808593 75.929688 75.925781-114.015626 37.960938zm347.664062-184.820313-13.238281 13.363282-86.917969-86.917969 13.367188-13.359375c14.621094-14.609375 38.320312-14.609375 52.945312 0l33.964844 33.964844c14.511719 14.6875 14.457032 38.332031-.121094 52.949218zm0 0"></path></svg>'
+
+        upper_div.append(first_p,last_p);
+
+        let lowerdiv = document.createElement('div');
+
+        let p = document.createElement('p');
+        p.style.textAlign = 'center';
+
+        let options = { month: 'long', day: 'numeric' }
+        options.timeZone = 'UTC';
+        options.timeZoneName = 'short';
+        var someDate = new Date();
+        var numberOfDaysToAdd = 7;
+        var result = someDate.setDate(someDate.getDate() + numberOfDaysToAdd);
+        let dat = new Date(result);
+        console.log('dat:', dat);
+        console.log(dat.toLocaleDateString('en-US', options));
+    
+        p.innerText = `Delivery by ${dat.toLocaleDateString('en-US', options)}`
+
+        lowerdiv.append(p)
+        deliverycheck.setAttribute("id","after_pincode");
+
+        deliverycheck.append(upper_div,lowerdiv);
+    }
+</script>

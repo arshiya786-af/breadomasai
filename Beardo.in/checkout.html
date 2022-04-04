@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout Adress</title>
+    <link rel="stylesheet" href="./wallet/checkout.css" />
+    <link rel="stylesheet" href="../header and footer/header.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+      #abvimg {
+        display: block;
+        width: 500px;
+        height: 150px;
+        margin: auto;
+        margin-top: 50px;
+      }
+      #header1 {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+      }
+      .topcircle {
+        width: 30px;
+        height: 30px;
+        border-radius: 15px;
+        border: 1px solid #c80504;
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+      }
+      .circleone + h3 {
+        color: #c80504;
+      }
+      .circletwo,
+      .circlethree {
+        border: 1px solid gray;
+        text-align: center;
+      }
+      .insidecircle1 {
+        width: 20px;
+        height: 20px;
+        background-color: #c80504;
+        border-radius: 50%;
+      }
+      .insidecircle2,
+      .insidecircle3 {
+        width: 20px;
+        height: 20px;
+
+        border-radius: 50%;
+      }
+      #toptitle {
+        display: flex;
+        width: 60%;
+        justify-content: space-between;
+        margin: auto;
+        margin-top: 20px;
+        color: gray;
+        font-weight: 800;
+      }
+      #toptitle > div > div {
+        margin: 0 auto;
+      }
+      .line {
+        width: 200px;
+        height: 5px;
+        border-bottom: 3px solid gray;
+        margin-top: 12px;
+      }
+      .two {
+        border-bottom: 3px solid gray;
+      }
+      #navbar1 {
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navbar1"></div>
+    <img
+      src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoiZnJlZS1za3UtMjVtbC5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsiZml0Ijoib3V0c2lkZSJ9fX0="
+      id="abvimg"
+      alt=""
+    />
+
+    <div id="toptitle">
+      <div class="contchk">
+        <div class="topcircle circleone">
+          <div class="insidecircle1"></div>
+        </div>
+        <h3>Address</h3>
+      </div>
+      <div class="line one"></div>
+      <div class="contchk">
+        <div class="topcircle circletwo">
+          <div class="insidecircle2">2</div>
+        </div>
+        <h3>Order Summary</h3>
+      </div>
+      <div class="line two"></div>
+      <div class="contchk">
+        <div class="topcircle circlethree">
+          <div class="insidecircle3">3</div>
+        </div>
+        <h3>Payment</h3>
+      </div>
+    </div>
+
+    <div id="addresscont">
+      <div id="addressdiv">
+        <h2>Shipping Details</h2>
+        <div id="adgridone" class="same">
+          <div>
+            <label for="">Firstname</label>
+            <input type="text" id="firstname" />
+          </div>
+          <div>
+            <label for="">Last Name</label>
+            <input type="text" id="Lastname" />
+          </div>
+          <div>
+            <label for="">Email Addres</label>
+            <input type="text" id="emailadress" />
+          </div>
+        </div>
+        <div id="adgridtwo" class="same">
+          <div>
+            <label for="">Mobile Number</label>
+            <input type="text" id="mobile" />
+          </div>
+          <div>
+            <label for="">Pincode</label>
+            <input type="text" id="Pincode" />
+          </div>
+          <div>
+            <label for="">City</label>
+            <input type="text" id="City" />
+          </div>
+        </div>
+        <div id="adgridthree" class="same">
+          <div>
+            <label for="">State</label>
+            <select name="state" id="state">
+              <option value="">Select state</option>
+              <option value="andaman">Andaman &amp; Nicobar Islands</option>
+              <option value="andhra pradesh">Andhra Pradesh</option>
+              <option value="Arunachal pradesh">Arunachal Pradesh</option>
+              <option value="Assam">Assam</option>
+              <option value="Bihar">Bihar</option>
+              <option value="Chandigarh<">Chandigarh</option>
+              <option value="Chhattisgarh">Chhattisgarh</option>
+              <option value="Dadra and Nagar Haveli and Daman and Diu">
+                Dadra and Nagar Haveli and Daman and Diu
+              </option>
+              <option value="Delhi">Delhi</option>
+              <option value="Goa">Goa</option>
+              <option value="Gujarat">Gujarat</option>
+              <option value="Haryana">Haryana</option>
+              <option value="Himachal Pradesh">Himachal Pradesh</option>
+              <option value="Jammu">Jammu &amp; Kashmir</option>
+              <option value="Jharkhand">Jharkhand</option>
+              <option value="Karnataka">Karnataka</option>
+              <option value="kerala">Kerala</option>
+              <option value="lakshadweep">Lakshadweep</option>
+              <option value="Madhya Pradesh">Madhya Pradesh</option>
+              <option value="Maharashtra">Maharashtra</option>
+              <option value="Manipur">Manipur</option>
+              <option value="Meghalaya">Meghalaya</option>
+              <option value="Mizoram">Mizoram</option>
+              <option value="Nagaland">Nagaland</option>
+              <option value="Odisha">Odisha</option>
+              <option value="Puducherry">Puducherry</option>
+              <option value="Punjab">Punjab</option>
+              <option value="Rajasthan">Rajasthan</option>
+              <option value="Sikkim<">Sikkim</option>
+              <option value="Tamil Nadu">Tamil Nadu</option>
+              <option value="Telangana">Telangana</option>
+              <option value="Tripura">Tripura</option>
+              <option value="Uttar Pradesh">Uttar Pradesh</option>
+              <option value="Uttarakhand">Uttarakhand</option>
+              <option value="West Bengal">West Bengal</option>
+            </select>
+          </div>
+          <div>
+            <label for="">Flat / House No. / Floor / Building</label>
+            <input type="text" id="flat" />
+          </div>
+        </div>
+        <div id="adgridfour" class="same">
+          <div>
+            <label for="">Colony / Street / Locality</label>
+            <input type="text" id="street" />
+          </div>
+          <div>
+            <label for="">Landmark (optional)</label>
+            <input type="text" id="landmark" />
+          </div>
+        </div>
+
+        <div id="adtype">
+          <label class="labelinp" id="lbone" for="">Home</label>
+
+          <label class="labelinp" id="lbtwo" for="">Office</label>
+
+          <label class="labelinp" id="lbthree" for="">Other</label>
+        </div>
+      </div>
+      <div id="totalpay">
+        <h2 id="items">PRICE DETAILS (0 ITEM)</h2>
+        <div>
+          <h3>subtotal</h3>
+          <h3 id="subtotal"></h3>
+        </div>
+        <div>
+          <h3>Delivery Charges</h3>
+          <h3>Free</h3>
+        </div>
+        <div>
+          <h1>You Pay</h1>
+          <h1 id="youpay">0</h1>
+        </div>
+
+        <button id="continue">CONTINUE</button>
+      </div>
+    </div>
+
+    <div id="footer"></div>
+  </body>
+</html>
+<script type="module">
+  import { header_new } from "../header and footer/header_new.js";
+  let header1 = document.getElementById("navbar1");
+  header1.innerHTML = header_new();
+
+  // console.log(header_new)
+
+  var one = document.getElementById("lbone");
+  var two = document.getElementById("lbtwo");
+  var three = document.getElementById("lbthree");
+  var adtype = "";
+
+  document.getElementById("lbone").addEventListener("click", function () {
+    one.style.backgroundColor = "red";
+    one.style.color = "white";
+    two.style.backgroundColor = "white";
+    two.style.color = "gray";
+    three.style.backgroundColor = "white";
+    three.style.color = "gray";
+    adtype = "home";
+  });
+  document.getElementById("lbtwo").addEventListener("click", function () {
+    two.style.backgroundColor = "red";
+    two.style.color = "white";
+    one.style.backgroundColor = "white";
+    one.style.color = "gray";
+    three.style.backgroundColor = "white";
+    three.style.color = "gray";
+    adtype = "office";
+  });
+  document.getElementById("lbthree").addEventListener("click", function () {
+    three.style.backgroundColor = "red";
+    three.style.color = "white";
+    one.style.backgroundColor = "white";
+    one.style.color = "gray";
+    two.style.backgroundColor = "white";
+    two.style.color = "gray";
+    adtype = "other";
+  });
+  var addresses = JSON.parse(localStorage.getItem("address_data")) || [];
+
+  var firstname = document.getElementById("firstname");
+  var lastname = document.getElementById("Lastname");
+  var email = document.getElementById("emailadress");
+  var mobile = document.getElementById("mobile");
+  var pincode = document.getElementById("Pincode");
+  var city = document.getElementById("City");
+  var state = document.getElementById("state");
+  var flat = document.getElementById("flat");
+  var landmark = document.getElementById("landmark");
+  var street = document.getElementById("street");
+
+  var btn = document.getElementById("continue");
+  btn.addEventListener("click", () => {
+    var obj = {};
+    obj.firstname = firstname.value;
+    obj.lastname = lastname.value;
+    obj.email = email.value;
+    obj.mobile = mobile.value;
+    obj.pincode = pincode.value;
+    obj.city = city.value;
+    obj.state = state.value;
+    obj.flat = flat.value;
+    obj.landmark = landmark.value;
+    obj.street = street.value;
+    obj.type = adtype;
+    console.log(obj);
+    addresses.push(obj);
+    localStorage.setItem("address_data", JSON.stringify(addresses));
+  });
+  var arr = JSON.parse(localStorage.getItem("cartdata")) || [];
+  var total = 0;
+  arr.forEach((elm) => {
+    total += +elm.price;
+    var subtotal = document.getElementById("subtotal");
+    subtotal.innerText = "₹ " + total;
+    var items = document.getElementById("items");
+    items.innerText = `PRICE DETAILS (${arr.length} ITEM)`;
+    var youpay = document.getElementById("youpay");
+    youpay.innerText = "₹ " + total;
+  });
+
+  // import {footer} from "../components/footer.js"
+
+  // document.getElementById("footer").innerHTML=footer()
+
+  document.getElementById("continue").addEventListener("click", () => {
+    window.location.href = "./OrderSummery.html";
+  });
+
+  document.getElementById("product").addEventListener("click", () => {
+    window.location.href = "product.html";
+  });
+</script>

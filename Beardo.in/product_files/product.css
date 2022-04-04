@@ -1,0 +1,202 @@
+* {
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background-color: black;
+}
+
+#header_two {
+    margin-top: 7.2%;
+    color: rgb(82, 87, 87);
+    justify-content: space-around;
+    height: 23px;
+    margin-left: 4%;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    padding: 0.5%;
+    display: flex;
+    width: 89.5%;
+    font-size: 13px;
+    box-shadow: rgba(0, 0, 0, 0.0) 0px 19px 38px, rgba(0, 0, 0, 0.1) 0px 15px 12px;
+    /* border:3px solid red; */
+    z-index: 2;
+}
+
+#header_data {
+    position: fixed;
+    height: 115px;
+    display: flex;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    /* border:3px solid rgb(4, 247, 36); */
+    margin-left: 4%;
+    margin-top: 9%;
+    width: 90.5%;
+    justify-content: center;
+}
+
+.top:hover {
+    color: rgb(233, 8, 8);
+    border-bottom: 3px solid rgb(219, 11, 11);
+}
+
+
+/*  */
+
+#filter {
+    background-color: white;
+    margin-left: 76%;
+    font-weight: 600;
+    margin-bottom: 3%;
+    padding: 0.7%;
+    font-size: 110%;
+    border-radius: 20px;
+    /* margin-top: 250px; */
+}
+
+#all_product {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    height: fit-content;
+    gap: 1%;
+    row-gap: 50px;
+    width: 100%;
+    padding: 100px;
+    padding-top: 0px;
+    box-sizing: border-box;
+    /* margin-bottom:300px; */
+    border-bottom: 2px solid lightgray;
+    max-width: 2000px;
+    margin: auto;
+    /* min-width: 650px; */
+}
+
+#append_div1:hover {
+    background-color: rgb(212, 207, 207);
+    border-bottom: 3px solid rgb(219, 11, 11);
+}
+
+#append_div1 {
+    width: 12%;
+    color: black;
+    /* border:3px solid blue; */
+    font-size: 11px;
+    padding: 1%;
+    padding-top: 1%;
+}
+
+#div06 {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+#div04 {
+    background-color: white;
+    flex-direction: column;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+    color: black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border: 0.5px solid rgb(240, 230, 230);
+    width: calc(20% + 150px);
+    box-sizing: border-box;
+    padding: 0px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#div28 {
+    font-size: 100%;
+    max-height: 80px;
+    font-weight: 600;
+    text-align: left;
+    padding: 10px;
+}
+
+#div29 {
+    background-color: rgb(49, 49, 49);
+    color: white;
+    font-weight: 800;
+    height: 45px;
+    font-size: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom: -10px !important;
+    width: 101%;
+    left: 0px;
+    right: 0px;
+    cursor: pointer;
+}
+
+#img04 {
+    padding: 2%;
+    background-color: white;
+    /* border:3px solid green; */
+    height: 170px;
+    width: 96%;
+}
+
+#div05 {
+    padding-top: 1%;
+    font-weight: 700;
+    padding-bottom: 3%;
+    font-size: 14px;
+}
+
+.cp {
+    line-height: 0px;
+    text-decoration: line-through;
+    text-decoration-color: red;
+    font-weight: 500;
+    font-size: 15px;
+    text-decoration-thickness: 2px;
+}
+
+#header1 {
+    max-width: 100%;
+}
+
+@media (min-width:800px) and (max-width: 1160px) {
+    #all_product {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        height: fit-content;
+        gap: 1%;
+        row-gap: 50px;
+        width: 100%;
+        padding: 100px;
+        padding-top: 0px;
+        box-sizing: border-box;
+        /* margin-bottom:300px; */
+        border-bottom: 2px solid lightgray;
+        max-width: 2000px;
+        margin: auto;
+        /* min-width: 650px; */
+    }
+}
+
+@media (max-width: 800px) {
+    #all_product {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        height: fit-content;
+        gap: 1%;
+        row-gap: 50px;
+        width: 100%;
+        padding: 100px;
+        padding-top: 0px;
+        box-sizing: border-box;
+        /* margin-bottom:300px; */
+        border-bottom: 2px solid lightgray;
+        max-width: 2000px;
+        margin: auto;
+        /* min-width: 650px; */
+    }
+}

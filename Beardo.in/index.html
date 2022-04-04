@@ -1,0 +1,771 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- browser top logo -->
+    <link rel="icon" href="logo/who_we_are.png" type="image/x-icon" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/fa650845c0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Open+Sans:wght@300&family=Yuji+Syuku&display=swap" rel="stylesheet">
+    <title>BEARDO | CONSTRUCT WEEK PROJECT | UNIT 3</title>
+</head>
+
+<body>
+    <div class="background_div"></div>
+    <div id="outercontainer">
+        <div id="container">
+            <div id="header">
+                <div id="box1"><img style="cursor: pointer;" onclick="window.location.href='index.html'" src="https://www.beardo.in/images/logo-white.png" alt=""></div>
+                <div id="box2">
+                    <img style="height: 25px;width:40px;cursor: pointer;" src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy9iZWFyZG8tdmlwLWNsdWItbG9nby1taW4ucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7ImZpdCI6Im91dHNpZGUifX19" alt="">
+                    <img style="cursor: pointer;" src="https://www.beardo.in/images/home-2018-05-search.png" alt="" onclick="window.location.href='./search.html'" />
+
+
+                    <img style="cursor: pointer;" onclick="window.location.href='cart.html'" src="https://www.beardo.in/images/home-2018-05-cart.png" alt="">
+
+
+                    <div><span class="badge" id="cart_count">0</span></div>
+
+                    <div class="dropdown" style="float:right;">
+                        <button class="dropbtn">&#9776</button>
+                        <nav class="header-top__menu">
+                            <div class="header-top__menu__head">
+                                <div class="header-top__menu__head__close">
+                                    <img class="lazy loading" src="https://www.beardo.in/images/temp/x-circle.svg" alt="" data-was-processed="true">
+                                </div>
+                                <div class="header-top_menu__head__login">
+                                    <!-- <img class="lazy" src="images/temp/user.svg" alt=""> -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="24.398" viewBox="0 0 22 24.398">
+                                        <g id="user" transform="translate(-3 -2.105)">
+                                            <path id="Path_10" data-name="Path 10" d="M24,22.7V20.134A5.069,5.069,0,0,0,19,15H9a5.069,5.069,0,0,0-5,5.134V22.7" transform="translate(0 2.801)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                                            <ellipse id="Ellipse_6" data-name="Ellipse 6" cx="4.731" cy="5" rx="4.731" ry="5" transform="translate(9 3.105)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></ellipse>
+                                        </g>
+                                    </svg>
+                                    <div class="header-top_menu__login__detail">
+                                        <p class="header-top_menu__login__detail__title"><a href="login.html" id="login_a">Login</a></p>
+                                        <p class="header-top_menu__login__detail__wallet">Login to view your Beardo Wallet amount</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="header-top__menu__list">
+                                <li class="header-top__menu__list__product sub-design product-cat">
+                                    <a href="javascript:void(0);" class="product_a">Product<span id="product_span"></span></a>
+                                    <div class="sub-design__menu header-top__menu__list__product__detail section">
+                                        <div class="header-top__menu__list__product__detail__left">
+                                            <div>
+                                                <div class="tns-outer" id="tns57-ow">
+                                                    <div id="tns57-mw" class="tns-ovh" style="height: 325px;">
+                                                        <div #swiperRef="" class="swiper1 SmySwiper" class="tns-inner" id="tns57-iw">
+                                                            <div class="swiper-wrapper" class="header-top__menu__list__product__detail__left__slider category  tns-slider tns-carousel tns-subpixel tns-calc tns-vertical" id="tns57" style="transition-duration: 0s; transform: translate3d(0px, 0px, 0px);">
+
+                                                                <div href="javascript:void(0)" class="swiper-slide" style="height:48px;max-width:93px;display:flex;align-items: center;justify-content:center">
+                                                                    <a id="cat-18" class="link tns-item tns-slide-active show">Combos</a>
+                                                                </div>
+                                                                <div href="javascript:void(0)" class="swiper-slide" style="height:48px;max-width:93px;display:flex;align-items: center;justify-content:center">
+                                                                    <a id="cat-1" class="link tns-item tns-slide-active">Beard</a></div>
+                                                                <div href="javascript:void(0)" class="swiper-slide" style="height:48px;max-width:93px;display:flex;align-items: center;justify-content:center">
+                                                                    <a id="cat-5" class="link tns-item tns-slide-active">Face</a>
+                                                                </div>
+                                                                <div href="javascript:void(0)" class="swiper-slide" style="height:48px;max-width:93px;display:flex;align-items: center;justify-content:center">
+                                                                    <a id="cat-4" class="link tns-item tns-slide-active">Hair</a>
+                                                                </div>
+                                                                <div href="javascript:void(0)" class="swiper-slide" style="height:48px;max-width:93px;display:flex;align-items: center;justify-content:center">
+                                                                    <a id="cat-12" class="link tns-item tns-slide-active">Body</a>
+                                                                </div>
+                                                                <div href="javascript:void(0)" class="swiper-slide" style="height:48px;max-width:93px;display:flex;align-items: center;justify-content:center">
+                                                                    <a id="cat-2" class="link tns-item tns-slide-active">Fragrance</a>
+                                                                </div>
+                                                                <div href="javascript:void(0)" class="swiper-slide" style="height:48px;max-width:93px;display:flex;align-items: center;justify-content:center">
+                                                                    <a id="cat-15" class="link tns-item tns-slide-active">Beardo Fashion</a>
+                                                                </div>
+                                                                <div href="javascript:void(0)" class="swiper-slide" style="height:48px;max-width:93px;display:flex;align-items: center;justify-content:center">
+                                                                    <a id="cat-10" class="link tns-item tns-slide-active">Trimmers</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="swiper-button-next" id="next_btn" data-controls="next"></div>
+                                                            <div class="swiper-button-prev" id="prev_btn" data-controls="prev"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="header-top__menu__list__product__detail__right">
+                                            <div class="header-top__menu__list__product__detail__right__list sub-cat-1 sub-category hide" id="sub-cat-1">
+                                                <div class="header-top__menu__list__product__detail__right__list__cont">
+                                                    <a href="product.html"><img class="lazy loading" src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy9ncm93dGgtb2lsLTEwMjR4MTAyNC04MzY0LnBuZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6ODAsImhlaWdodCI6MSwiZml0Ijoib3V0c2lkZSJ9fX0="
+                                                            alt="" data-was-processed="true">
+                                                        <p>Beard Growth</p>
+                                                    </a>
+                                                    <a href="product.html"><img class="lazy loading" src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy9iZWFyZC1zZXJ1bS0xMDI0eDEwMjQtODM3NS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgwLCJoZWlnaHQiOjEsImZpdCI6Im91dHNpZGUifX19"
+                                                            alt="" data-was-processed="true">
+                                                        <p>Beard Styling</p>
+                                                    </a>
+                                                    <a href="product.html"><img class="lazy loading" src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy9iZWFyZC1jb2xvci0xMDI0eDEwMjQtODM3NC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgwLCJoZWlnaHQiOjEsImZpdCI6Im91dHNpZGUifX19"
+                                                            alt="" data-was-processed="true">
+                                                        <p>Beard Color</p>
+                                                    </a>
+                                                    <a href="product.html"><img class="lazy loading" src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy9zaGVlc2hhbS1iZWFyZC1jb21iLTEtODY1Ny5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgwLCJoZWlnaHQiOjEsImZpdCI6Im91dHNpZGUifX19"
+                                                            alt="" data-was-processed="true">
+                                                        <p>Beard Tools</p>
+                                                    </a>
+                                                </div>
+                                                <a href="product.html" class="header-top__menu__list__product__detail__right__list__view-btn">view all</a>
+                                            </div>
+                                            <div class="header-top__menu__list__product__detail__right__list sub-cat-12 sub-category hide" id="sub-cat-12">
+                                                <div class="header-top__menu__list__product__detail__right__list__cont">
+                                                    <a href="product.html"><img class="lazy" src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy9hY3RpdmF0ZWQtY2hhcmNvYWwtYm9keXdhc2gtNTEyeDUxMi0xMjI0NS0xMzExNS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgwLCJoZWlnaHQiOjEsImZpdCI6Im91dHNpZGUifX19"
+                                                            alt="">
+                                                        <p>Bodywash</p>
+                                                    </a>
+                                                    <a href="product.html"><img class="lazy" src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy9kZWVwLXNlYS1icmljay1zb2FwLTUxMng1MTItMTMxMTQtMS0zNjk1NS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgwLCJoZWlnaHQiOjEsImZpdCI6Im91dHNpZGUifX19"
+                                                            alt="">
+                                                        <p>Soaps</p>
+                                                    </a>
+                                                    <a href="product.html"><img class="lazy" src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy92aXRhbWluLWMteW9ndXJ0LTUxMng1MTItMS0xMTA2MS0xMzE1NC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgwLCJoZWlnaHQiOjEsImZpdCI6Im91dHNpZGUifX19"
+                                                            alt="">
+                                                        <p>Body Nourishment</p>
+                                                    </a>
+                                                    <a href="product.html"><img class="lazy" src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy90YXR0b28tc2hpbmVyLTEwMjR4MTAyNC04MzY4LnBuZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6ODAsImhlaWdodCI6MSwiZml0Ijoib3V0c2lkZSJ9fX0="
+                                                            alt="">
+                                                        <p>Tattoo Care</p>
+                                                    </a>
+                                                    <a href="product.html"><img class="lazy" src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy9pbnRpbWF0ZS13YXNoLTEwMjR4MTAyNC0yLTgzNjkucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo4MCwiaGVpZ2h0IjoxLCJmaXQiOiJvdXRzaWRlIn19fQ=="
+                                                            alt="">
+                                                        <p>Intimate care</p>
+                                                    </a>
+                                                </div>
+                                                <a href="product.html" class="header-top__menu__list__product__detail__right__list__view-btn">view all</a>
+                                            </div>
+                                            <div class="header-top__menu__list__product__detail__right__list sub-cat-5 sub-category hide" id="sub-cat-5">
+                                                <div class="header-top__menu__list__product__detail__right__list__cont">
+                                                    <a href="product.html"><img class="lazy" src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy92aXRhbWluLWMtY29tcGxldGUtY2FyZS1jb21iby01MTJ4NTEyLTExNzE1LTEyMDY2LnBuZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6ODAsImhlaWdodCI6MSwiZml0Ijoib3V0c2lkZSJ9fX0="
+                                                            alt="">
+                                                        <p>Vitamin C Range</p>
+                                                    </a>
+                                                    <a href="product.html"><img class="lazy" src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy9hY3RpdmF0ZWQtY2hhcmNvYWwtZmFjZXdhc2gtMTAyNHgxMDI0LTg0MDEucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo4MCwiaGVpZ2h0IjoxLCJmaXQiOiJvdXRzaWRlIn19fQ=="
+                                                            alt="">
+                                                        <p>Facewash</p>
+                                                    </a>
+                                                    <a href="product.html"><img class="lazy" src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy9uZWVtLWZhY2Utc2NydWItMTAyNHgxMDI0LTgzNzkucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo4MCwiaGVpZ2h0IjoxLCJmaXQiOiJvdXRzaWRlIn19fQ=="
+                                                            alt="">
+                                                        <p>Scrubs &amp; Masks</p>
+                                                    </a>
+                                                    <a href="product.html"><img class="lazy" src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy91bmRlci1leWUtZ2VsLTEwMjR4MTAyNC04MzcyLnBuZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6ODAsImhlaWdodCI6MSwiZml0Ijoib3V0c2lkZSJ9fX0="
+                                                            alt="">
+                                                        <p>Eye Care</p>
+                                                    </a>
+                                                    <a href="product.html"><img class="lazy" src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy91bHRyYWdsb3ctbG90aW9uLTEwMjR4MTAyNC04MzgwLnBuZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6ODAsImhlaWdodCI6MSwiZml0Ijoib3V0c2lkZSJ9fX0="
+                                                            alt="">
+                                                        <p>Face Moisturizers and Serums</p>
+                                                    </a>
+                                                    <a href="product.html"><img class="lazy" src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy9saXAtbGlnaHRlbmVyLTEwMjR4MTAyNC04MzgyLnBuZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6ODAsImhlaWdodCI6MSwiZml0Ijoib3V0c2lkZSJ9fX0="
+                                                            alt="">
+                                                        <p>Lip Care</p>
+                                                    </a>
+                                                </div>
+                                                <a href="product.html" class="header-top__menu__list__product__detail__right__list__view-btn">view all</a>
+                                            </div>
+                                            <div class="header-top__menu__list__product__detail__right__list sub-cat-18 sub-category" id="sub-cat-18">
+                                                <div class="header-top__menu__list__product__detail__right__list__cont">
+                                                    <a href="product.html"><img class="lazy" src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy91bHRpbWF0ZS1mdy10cmlvLTUxMng1MTItMTE5NDAucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo4MCwiaGVpZ2h0IjoxLCJmaXQiOiJvdXRzaWRlIn19fQ=="
+                                                            alt="">
+                                                        <p>Top Sellers</p>
+                                                    </a>
+                                                    <a href="product.html"><img class="lazy" src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy9iZWFyZC1ncm93dGgtY29tYm8tNTEyeDUxMi01MjI3LTExOTQxLnBuZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6ODAsImhlaWdodCI6MSwiZml0Ijoib3V0c2lkZSJ9fX0="
+                                                            alt="">
+                                                        <p>Below 999 Combos</p>
+                                                    </a>
+                                                    <a href="product.html"><img class="lazy" src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy9jaGFyY29hbC1id2Z3LTUxMng1MTItNzI3OC0xMTk0OS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgwLCJoZWlnaHQiOjEsImZpdCI6Im91dHNpZGUifX19"
+                                                            alt="">
+                                                        <p>Below 499 Combos</p>
+                                                    </a>
+                                                </div>
+                                                <a href="product.html" class="header-top__menu__list__product__detail__right__list__view-btn">view all</a>
+                                            </div>
+                                            <div class="header-top__menu__list__product__detail__right__list sub-cat-15 sub-category hide" id="sub-cat-15">
+                                                <div class="header-top__menu__list__product__detail__right__list__cont">
+                                                    <a href="product.html"><img class="lazy" src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy9yc3otMXJzei1zaGVlc2hhbS1iZWFyZC1jb21iLTEtMS0xLTgzNjIucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo4MCwiaGVpZ2h0IjoxLCJmaXQiOiJvdXRzaWRlIn19fQ=="
+                                                            alt="">
+                                                        <p>Accessories</p>
+                                                    </a>
+                                                    <a href="product.html"><img class="lazy" src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy90LXNoaXJ0LTEwMjR4MTAyNC04MzcwLnBuZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6ODAsImhlaWdodCI6MSwiZml0Ijoib3V0c2lkZSJ9fX0="
+                                                            alt="">
+                                                        <p>T-shirts</p>
+                                                    </a>
+                                                    <a href="product.html"><img class="lazy" src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy9sZWF0aGVyLWphY2tldC0xMDI0eDEwMjQtMS0xLTk0MjIucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo4MCwiaGVpZ2h0IjoxLCJmaXQiOiJvdXRzaWRlIn19fQ=="
+                                                            alt="">
+                                                        <p>Jackets</p>
+                                                    </a>
+                                                </div>
+                                                <a href="product.html" class="header-top__menu__list__product__detail__right__list__view-btn">view all</a>
+                                            </div>
+                                            <div class="header-top__menu__list__product__detail__right__list sub-cat-10 sub-category hide" id="sub-cat-10">
+                                                <div class="header-top__menu__list__product__detail__right__list__cont">
+                                                    <a href="product.html"><img class="lazy" src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy9ncm9vbWluZy1raXQtMDEtODM3My5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgwLCJoZWlnaHQiOjEsImZpdCI6Im91dHNpZGUifX19"
+                                                            alt="">
+                                                        <p>Trimmers</p>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="header-top__menu__list__product__detail__right__list sub-cat-2 sub-category hide" id="sub-cat-2">
+                                                <div class="header-top__menu__list__product__detail__right__list__cont">
+                                                    <a href="product.html"><img class="lazy" src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy9kYXJrLXNpZGUtcGVyZnVtZS0xMDI0eDEwMjQtODM3Ny5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgwLCJoZWlnaHQiOjEsImZpdCI6Im91dHNpZGUifX19"
+                                                            alt="">
+                                                        <p>EDP (Strong perfumes)</p>
+                                                    </a>
+                                                    <a href="product.html"><img class="lazy" src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy9yc3otc3B5LWRpby01MTJ4NTEyLTg0MDQucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo4MCwiaGVpZ2h0IjoxLCJmaXQiOiJvdXRzaWRlIn19fQ=="
+                                                            alt="">
+                                                        <p>Perfume Body Spray</p>
+                                                    </a>
+                                                </div>
+                                                <a href="product.html" class="header-top__menu__list__product__detail__right__list__view-btn">view all</a>
+                                            </div>
+                                            <div class="header-top__menu__list__product__detail__right__list sub-cat-4 sub-category hide" id="sub-cat-4">
+                                                <div class="header-top__menu__list__product__detail__right__list__cont">
+                                                    <a href="product.html"><img class="lazy" src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy9oYWlyLXNlcnVtLTEwMjR4MTAyNC04MzMyLTg2NTgucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo4MCwiaGVpZ2h0IjoxLCJmaXQiOiJvdXRzaWRlIn19fQ=="
+                                                            alt="">
+                                                        <p>Oils and Serums</p>
+                                                    </a>
+                                                    <a href="product.html"><img class="lazy" src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy9zdHJvbmctaG9sZC13YXgtbmV3LTUxMng1MTItMTI0MTgucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo4MCwiaGVpZ2h0IjoxLCJmaXQiOiJvdXRzaWRlIn19fQ=="
+                                                            alt="">
+                                                        <p>Hair Styling and Grooming</p>
+                                                    </a>
+                                                    <a href="/categories/hair/shampoo-conditioners"><img class="lazy" src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy9oYWlyLWZhbGwtY29udHJvbC1zaGFtcG9vLTEwMjR4MTAyNC04Mzc4LnBuZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6ODAsImhlaWdodCI6MSwiZml0Ijoib3V0c2lkZSJ9fX0="
+                                                            alt="">
+                                                        <p>Shampoos &amp; Conditioners</p>
+                                                    </a>
+                                                </div>
+                                                <a href="product.html" class="header-top__menu__list__product__detail__right__list__view-btn">view all</a>
+                                            </div>
+                                            <!-- <a href="javascript:void(0);" class="header-top__menu__list__product__detail__right__btn">View All</a> -->
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="header-top__menu__list__product sub-design concern-cat">
+                                    <a href="javascript:void(0);" class="concern_a">Concern<span id="concern_span"></span></a>
+                                    <div class="sub-design__menu header-top__menu__list__product__detail section">
+                                        <div class="header-top__menu__list__product__detail__left">
+                                            <div>
+                                                <div class="header-top__menu__list__product__detail__left__slider concern">
+                                                    <a href="javascript:void(0)" id="con-1" class="link show">Beard</a>
+                                                    <a href="javascript:void(0)" id="con-3" class="link ">Face</a>
+                                                    <a href="javascript:void(0)" id="con-4" class="link ">Hair</a>
+                                                    <a href="javascript:void(0)" id="con-5" class="link ">Body</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="header-top__menu__list__product__detail__right">
+                                            <div class="header-top__menu__list__product__detail__right__list sub-concern sub-con-1 " id="sub-con-1">
+                                                <div class="header-top__menu__list__product__detail__right__list__cont">
+                                                    <a href="product.html"><img class="lazy" src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy9ncm93dGgtb2lsLTEwMjR4MTAyNC04Mzg0LnBuZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6ODAsImhlaWdodCI6MSwiZml0Ijoib3V0c2lkZSJ9fX0="
+                                                            alt="">
+                                                        <p>Beard Growth</p>
+                                                    </a>
+                                                    <a href="product.html"><img class="lazy" src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy9iZWFyZC1zb2Z0bmVyLTEwMjR4MTAyNC04NDAyLnBuZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6ODAsImhlaWdodCI6MSwiZml0Ijoib3V0c2lkZSJ9fX0="
+                                                            alt="">
+                                                        <p>Rough &amp; Itchy</p>
+                                                    </a>
+                                                    <a href="product.html"><img class="lazy" src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy9iZWFyZC1zZXJ1bS0xMDI0eDEwMjQtODM5OS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgwLCJoZWlnaHQiOjEsImZpdCI6Im91dHNpZGUifX19"
+                                                            alt="">
+                                                        <p>Long Beard Grooming</p>
+                                                    </a>
+                                                    <a href="product.html"><img class="lazy" src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy9iZWFyZC1tdXN0YWNoZS13YXgtZXh0cmEtc3Ryb25nLTEwMjR4MTAyNC04NDAwLnBuZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6ODAsImhlaWdodCI6MSwiZml0Ijoib3V0c2lkZSJ9fX0="
+                                                            alt="">
+                                                        <p>Short Beard Grooming</p>
+                                                    </a>
+                                                </div>
+                                                <a href="product.html" class="header-top__menu__list__product__detail__right__list__view-btn">view all</a>
+                                            </div>
+                                            <div class="header-top__menu__list__product__detail__right__list sub-concern sub-con-3 hide" id="sub-con-3">
+                                                <div class="header-top__menu__list__product__detail__right__list__cont">
+                                                    <a href="product.html"><img class="lazy" src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy91bHRyYWdsb3ctZmFjZXdhc2gtMTAyNHgxMDI0LTg2NTkucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo4MCwiaGVpZ2h0IjoxLCJmaXQiOiJvdXRzaWRlIn19fQ=="
+                                                            alt="">
+                                                        <p>Skin Glow</p>
+                                                    </a>
+                                                    <a href="product.html"><img class="lazy" src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy9saXAtbGlnaHRlbmVyLTEwMjR4MTAyNC04Mzg1LnBuZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6ODAsImhlaWdodCI6MSwiZml0Ijoib3V0c2lkZSJ9fX0="
+                                                            alt="">
+                                                        <p>Dark &amp; Chapped Lips</p>
+                                                    </a>
+                                                    <a href="product.html"><img class="lazy" src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy9hY3RpdmF0ZWQtY2hhcmNvYWwtZmFjZXdhc2gtMTAyNHgxMDI0LTgzOTMucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo4MCwiaGVpZ2h0IjoxLCJmaXQiOiJvdXRzaWRlIn19fQ=="
+                                                            alt="">
+                                                        <p>Dirt and Pollution control</p>
+                                                    </a>
+                                                    <a href="product.html"><img class="lazy" src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy91bmRlci1leWUtZ2VsLTEwMjR4MTAyNC04Mzk0LnBuZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6ODAsImhlaWdodCI6MSwiZml0Ijoib3V0c2lkZSJ9fX0="
+                                                            alt="">
+                                                        <p>Dark Circles</p>
+                                                    </a>
+                                                    <a href="product.html"><img class="lazy" src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy9hbnRpLWFjbmUtZmFjZS13YXNoLXR1cm1lcmljLTEwMjR4MTAyNC04Mzk1LnBuZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6ODAsImhlaWdodCI6MSwiZml0Ijoib3V0c2lkZSJ9fX0="
+                                                            alt="">
+                                                        <p>Oily Skin</p>
+                                                    </a>
+                                                    <a href="product.html"><img class="lazy" src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy9iZWFyZG8tdHVybWVyaWMtZmFjZS1nZWwtMTAyNHgxMDI0LTgzNTYucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo4MCwiaGVpZ2h0IjoxLCJmaXQiOiJvdXRzaWRlIn19fQ=="
+                                                            alt="">
+                                                        <p>Acne/ Pimples</p>
+                                                    </a>
+                                                    <a href="product.html"><img class="lazy" src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy9kZS10YW4tZmFjZXdhc2gtMTAyNHgxMDI0LTgzOTgucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo4MCwiaGVpZ2h0IjoxLCJmaXQiOiJvdXRzaWRlIn19fQ=="
+                                                            alt="">
+                                                        <p>Tanned Skin</p>
+                                                    </a>
+                                                </div>
+                                                <a href="product.html" class="header-top__menu__list__product__detail__right__list__view-btn">view all</a>
+                                            </div>
+                                            <div class="header-top__menu__list__product__detail__right__list sub-concern sub-con-4 hide" id="sub-con-4">
+                                                <div class="header-top__menu__list__product__detail__right__list__cont">
+                                                    <a href="product.html"><img class="lazy" src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy9oYWlyLXRoaWNoZW5pbmctc2VydW0tc3ByYXktMTAyNHgxMDI0LTg2NjAucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo4MCwiaGVpZ2h0IjoxLCJmaXQiOiJvdXRzaWRlIn19fQ=="
+                                                            alt="">
+                                                        <p>Hair Thinning</p>
+                                                    </a>
+                                                    <a href="product.html"><img class="lazy" src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy9oYWlyLXRoaWNoZW5pbmctc2VydW0tc3ByYXktMTAyNHgxMDI0LTgzNDEucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo4MCwiaGVpZ2h0IjoxLCJmaXQiOiJvdXRzaWRlIn19fQ=="
+                                                            alt="">
+                                                        <p>Hairfall and Balding</p>
+                                                    </a>
+                                                    <a href="product.html"><img class="lazy" src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy9kYW5kcnVmZi1jb250cm9sLXNoYW1wb28td2l0aC1hcHBsZS1jaWRlci12aW5lZ2FyLTEwMjR4MTAyNC04Mzg3LnBuZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6ODAsImhlaWdodCI6MSwiZml0Ijoib3V0c2lkZSJ9fX0="
+                                                            alt="">
+                                                        <p>Dandruff</p>
+                                                    </a>
+                                                    <a href="product.html"><img class="lazy" src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy9oYWlyLXNlcnVtLTEwMjR4MTAyNC04Mzg4LnBuZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6ODAsImhlaWdodCI6MSwiZml0Ijoib3V0c2lkZSJ9fX0="
+                                                            alt="">
+                                                        <p>Rough &amp; Damaged Hair</p>
+                                                    </a>
+                                                </div>
+                                                <a href="product.html" class="header-top__menu__list__product__detail__right__list__view-btn">view all</a>
+                                            </div>
+                                            <div class="header-top__menu__list__product__detail__right__list sub-concern sub-con-5 hide" id="sub-con-5">
+                                                <div class="header-top__menu__list__product__detail__right__list__cont">
+                                                    <a href="product.html"><img class="lazy" src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy93aXBlb3V0LWhhbmR3YXNoLTEwMjR4MTAyNC04Mzg5LnBuZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6ODAsImhlaWdodCI6MSwiZml0Ijoib3V0c2lkZSJ9fX0="
+                                                            alt="">
+                                                        <p>Germ Control</p>
+                                                    </a>
+                                                    <a href="product.html"><img class="lazy" src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy90YXR0b28tc2hpbmVyLTEwMjR4MTAyNC04MzkwLnBuZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6ODAsImhlaWdodCI6MSwiZml0Ijoib3V0c2lkZSJ9fX0="
+                                                            alt="">
+                                                        <p>Tattoo Care</p>
+                                                    </a>
+                                                    <a href="product.html"><img class="lazy" src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy9kYXJrLXNpZGUtcGVyZnVtZS0xMDI0eDEwMjQtODM5Mi5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjgwLCJoZWlnaHQiOjEsImZpdCI6Im91dHNpZGUifX19"
+                                                            alt="">
+                                                        <p>Body odour</p>
+                                                    </a>
+                                                    <a href="product.html"><img class="lazy" src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy9ib2R5LWxvdGlvbi13aXRoLWFsb2UtdmVyYS10ZWEtdHJlZS1vaWwtMTAyNHgxMDI0LTgzOTcucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo4MCwiaGVpZ2h0IjoxLCJmaXQiOiJvdXRzaWRlIn19fQ=="
+                                                            alt="">
+                                                        <p>Dry Skin</p>
+                                                    </a>
+                                                </div>
+                                                <a href="product.html" class="header-top__menu__list__product__detail__right__list__view-btn">view all</a>
+                                            </div>
+                                            <!-- <a href="javascript:void(0);" class="header-top__menu__list__product__detail__right__btn">View All</a> -->
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="header-top__menu__list__about">
+                                    <a href="product.html">Gifts For Men</a>
+                                </li>
+                                <li class="header-top__menu__list__about sub-design not-close-on-click">
+                                    <a href="javascript:void(0);" class="about_a">About<span id="about_span"></span></a>
+                                    <div class="sub-design__menu header-top__menu__list__about__detail">
+                                        <a href="about.html">Who We Are</a>
+                                        <a href="product.html">Contact Us</a>
+                                        <a href="product.html">Blog</a>
+                                        <a href="product.html">Privacy Policy</a>
+                                        <a href="product.html">Terms &amp; Conditions</a>
+                                        <!-- <a href="/beardo-points-rewards">Points & Rewards</a> -->
+                                        <a href="product.html">Return Policy</a>
+                                    </div>
+
+                                </li>
+                                <li><a href="product.html" data-login="login" class="initialized">Track Order</a></li>
+                                <li><a href="product.html">VIP Club</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <div id="inner_container">
+
+                <div id="poster">
+                    <img src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy9iZWFyZG8teWFzaC13ZWJzaXRlLWJhbm5lci0xMDgwLXgtMTA4MC0zODc0OC5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsiZml0Ijoib3V0c2lkZSJ9fX0=" alt="">
+                </div>
+
+
+                <div id="menuscroll">
+
+                    <div onclick="window.location.href='product.html'">COMBOS</div>
+                    <div onclick="window.location.href='product.html'">BEARD</div>
+                    <div onclick="window.location.href='product.html'">FACE</div>
+                    <div onclick="window.location.href='product.html'">HAIR</div>
+                    <div onclick="window.location.href='product.html'">BODY</div>
+                    <div onclick="window.location.href='product.html'">FRAGRANCE</div>
+                    <div onclick="window.location.href='product.html'">FASHION</div>
+                    <div onclick="window.location.href='product.html'">TRIMMERS</div>
+                </div>
+
+
+
+
+                <!-- Slider main container -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy9kYzNlMTNkNC0yYjU2LTRlMWMtOWVmNy04Zjk0MmJiNWI0YzktMzc3ODMucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7ImZpdCI6Im91dHNpZGUifX19" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy9zdWxwaGF0ZS1mcmVlLXNoYW1wb28tMTA4MHg3MDAtMS0zODI2OC5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsiZml0Ijoib3V0c2lkZSJ9fX0=" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy9ncm93dGgtb2lsLTM3NDcxLnBuZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJvdXRzaWRlIn19fQ==" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy93aGlza2V5LXNtb2tlLXBlcmZ1bWUtMzc5MDMucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7ImZpdCI6Im91dHNpZGUifX19" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy8xMTFiZWFyZG8tZ2lmdGluZy1iYW5uZXItMTA4MC14LTcwMC0xLTM4Mjg3LnBuZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJvdXRzaWRlIn19fQ==" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy92aXAtY2x1Yi1uZXctYmFubmVyLTAxLTM2NDMyLnBuZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJvdXRzaWRlIn19fQ==" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy9xcXFxYmVhcmRvLWhlbXAtcmFuZ2UtbmV3LWxhdW5jaC1iYW5uZXItMS0zNzc0Ny5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsiZml0Ijoib3V0c2lkZSJ9fX0=" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <div id="next_div">
+                        <div id="next"></div>
+                    </div>
+                    <div id="prev_div">
+                        <div id="prev"></div>
+                    </div>
+                </div>
+
+
+                <div id="topsellers">
+                    <h3>TOP SELLERS</h3>
+                    <div id="tscontainer" class="prodcontainer">
+
+                    </div>
+                </div>
+
+
+                <div>
+                    <img src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy9kb24tY29sbGVjdGlvbi0zNjk4Mi5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsiZml0Ijoib3V0c2lkZSJ9fX0=" alt=" ">
+                </div>
+
+
+                <video autoplay muted loop playsinline width=100% height:250px>
+                <source src="https://beardoc.s3.ap-south-1.amazonaws.com/mafia/mafia-video.mp4" type="video/mp4"> 
+                </video>
+
+                <h3>GIFTS FOR MEN</h3>
+                <div class="prodcontainer" id="afterprize"></div>
+                <button class="viewButton">view more</button>
+
+
+                <div><img src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy9iZWFyZG8tdmlwLXNhbGUtd2Vic2l0ZS1jYXRlZ29yeS1iYW5uZXItMDYtMzY5ODYuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7ImZpdCI6Im91dHNpZGUifX19 " alt=" ">
+                </div>
+
+                <div id="face">
+                    <h3>FACE ESSENTIALS</h3>
+                    <div id="faceEssentials" class="prodcontainer"></div>
+                </div>
+                <div>
+                    <img src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy9iZWFyZG8tdmlwLXNhbGUtd2Vic2l0ZS1jYXRlZ29yeS1iYW5uZXItMDIxMS0zNjk3OC5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsiZml0Ijoib3V0c2lkZSJ9fX0=" alt=" ">
+                </div>
+
+                <!-- 
+
+            <div>
+                <img src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy9iZWFyZG8tdmlwLXNhbGUtd2Vic2l0ZS1jYXRlZ29yeS1iYW5uZXItMDEtMzY5NzMuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7ImZpdCI6Im91dHNpZGUifX19 " alt=" ">
+            </div> -->
+
+                <div id="hotsellers">
+                    <h3>HOT SELLERS</h3>
+                    <div id="hotSeller_container" class="prodcontainer "></div>
+                </div>
+
+
+
+                <div>
+                    <img src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy9iZWFyZG8tdmlwLXNhbGUtd2Vic2l0ZS1jYXRlZ29yeS1iYW5uZXItMDQtMS0zNzIwMi5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsiZml0Ijoib3V0c2lkZSJ9fX0=" alt=" ">
+                </div>
+
+                <div id="combo_container">
+                    <h3>MOST WANTED COMBOS</h3>
+                    <div id="comboDisplay"></div>
+                    <button class="viewButton " id="viewBtn ">view more</button>
+
+                </div>
+
+                <div>
+                    <img src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoidXBsb2Fkcy9iZWFyZG8tdmlwLXNhbGUtd2Vic2l0ZS1jYXRlZ29yeS1iYW5uZXItMDMtMS0zNzI0MC5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsiZml0Ijoib3V0c2lkZSJ9fX0=" alt=" "></div>
+
+
+
+                <!-- Footer -->
+                <hr style="background-color: white;height: 2px; ">
+                <div id="mustash">
+                    <span class="line"></span>
+                    <img style="height: 15px; max-width: 50px; margin: 2px;" id="mucchi " src="https://images.beardo.in/eyJidWNrZXQiOiJiZWFyZG9jIiwia2V5IjoibWFmaWEyMS9tdXN0YWNoZS1sb2dvLXdoaXRlLnBuZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJmaXQiOiJvdXRzaWRlIn19fQ==">
+                    <span class="line"></span>
+                </div>
+
+                <img id="footerimgg" src="https://www.beardo.in/images/logo-white.png" alt=" ">
+                <p id="icon">
+                    <a class="fab fa-facebook-square" href="https://www.facebook.com/beardoofficial/"></a>
+                    <a class="fab fa-instagram" href="https://www.instagram.com/beardo.official/?hl=en"></a>
+                    <a class="fab fa-twitter-square" href="https://twitter.com/beardoformen?lang=en"></a>
+                    <a class="fab fa-youtube-square" href="https://www.youtube.com/channel/UC8tE3gNWC-B6BqLuKkqivxw"></a>
+                </p>
+                <!-- <hr style="background-color: white;height: 4px; "> -->
+                <h4><a href="././product page/beardo project/product.html">PRODUCTS</a></h4>
+                <hr style="background-color: white;height: 2px; ">
+                <h4><a href="./index.html">USEFULL LINKS</a></h4>
+
+                <div id="footersmall">
+                    <div id="small1">
+                        <p>Who we are</p>
+                        <p>Blog</p>
+                        <p>Careers</p>
+                        <p>Cart</p>
+                        <p>FAQ's</p>
+                        <p>Beardo Wallet</p>
+                        <p>VIP CLUB T&C</p>
+                    </div>
+                    <div id="small2">
+                        <p>Community</p>
+                        <p>Contact us</p>
+                        <p>Account</p>
+                        <p>Track Order</p>
+                        <p>Beardothon</p>
+                        <p>Return & Refund policy</p>
+                        <p>VIP CLUB SALE 2022 T&C</p>
+                    </div>
+                </div>
+            </div>
+            <div id="poli">
+                <p>©2021 Zed Lifestyle Private Limited. All Rights Reserved</p>
+                <p id="terms ">
+                    <a href="https://www.beardo.in/privacy-policy">Privacy Policy  </a>
+                    <a href="https://www.beardo.in/terms-conditions">Terms & Condition</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<!-- <script src="./scripts/recommenddata.js "></script> -->
+<script src="./scripts/menu1.js"></script>
+<!-- <script type="module"> -->
+
+
+<!-- </script> -->
+<script src="./scripts/menuwrapper.js"></script>
+
+
+<script src="./homepage/Data.js"></script>
+<!-- <script src="./scripts/menuwrapper.js "></script> -->
+
+<!-- swiper script -->
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 'auto',
+        spaceBetween: 10,
+        centeredSlides: true,
+        loop: true,
+        autoplay: {
+            delay: 5500,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: "#next_div",
+            prevEl: "#prev_div",
+        },
+    });
+</script>
+
+<script>
+    var swiper = new Swiper(".SmySwiper", {
+        direction: "vertical",
+        slidesPerView: 5,
+        spaceBetween: 0,
+        // mousewheel: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
+        }
+    });
+</script>
+
+
+<script>
+    window.addEventListener("load", () => {
+        let login_a = document.getElementById("login_a");
+        let loggedin = localStorage.getItem("loggedin");
+        let updateted_profile = localStorage.getItem("updateted_profile");
+        let normal_login = JSON.parse(localStorage.getItem("normal_login"));
+        console.log('normal_login:', normal_login)
+        let google_data = JSON.parse(localStorage.getItem("google_data"));
+        let fb_data = JSON.parse(localStorage.getItem("fb_data"));
+        let wallet_p = document.querySelector(".header-top_menu__login__detail__wallet");
+        let wallet_balance = localStorage.getItem("wallet_balance")||0;
+
+        console.log(login_a)
+        if (loggedin === "true") {
+            wallet_p.innerText = `Beardo Wallet Amount: Rs ${wallet_balance}`;
+            if (updateted_profile !== null) {
+                login_a.innerText = `${updateted_profile.first_name} ${updateted_profile.last_name}`
+            }
+            if (normal_login !== null) {
+                login_a.innerText = `${normal_login.name} ${normal_login.email}`;
+            }
+            if (google_data !== null) {
+                login_a.innerText = `${google_data.first_name} ${google_data.last_name}`;
+            }
+            if (fb_data !== null) {
+                login_a.innerText = `${fb_data.first_name} ${fb_data.last_name}`;
+            }
+        }
+
+
+        let header_Products_arr = [1, 2, 4, 5, 10, 12, 15, 18];
+
+        let ignore = (g) => {
+            for (let i = 0; i < header_Products_arr.length; i++) {
+                if (header_Products_arr[i] !== g) {
+                    // console.log(g)
+                    let category_div = document.getElementById(`cat-${header_Products_arr[i]}`);
+                    let category_product = document.getElementById(`sub-cat-${header_Products_arr[i]}`);
+                    category_div.setAttribute("class", "link tns-item tns-slide-active");
+                    category_product.setAttribute("class", `header-top__menu__list__product__detail__right__list sub-cat-${header_Products_arr[i]} sub-category hide`);
+                }
+            }
+        }
+
+        header_Products_arr.map((el, index) => {
+            let category_div = document.getElementById(`cat-${el}`);
+            let category_product = document.getElementById(`sub-cat-${el}`);
+            category_div.addEventListener("click", () => {
+                category_div.setAttribute("class", "link tns-item tns-slide-active show active");
+                // console.log(el);
+                ignore(el);
+                category_product.setAttribute("class", `header-top__menu__list__product__detail__right__list sub-cat-${el} sub-category`);
+            })
+        })
+
+        let header_Concerns_arr = [1, 3, 4, 5];
+
+        let ignore_elem = (l) => {
+            for (var i = 0; i < header_Concerns_arr.length; i++) {
+                if (header_Concerns_arr[i] !== l) {
+                    let concern_cat = document.getElementById(`con-${header_Concerns_arr[i]}`);
+                    let concern_product = document.getElementById(`sub-con-${header_Concerns_arr[i]}`);
+                    concern_cat.setAttribute("class", "link");
+                    concern_product.setAttribute("class", `header-top__menu__list__product__detail__right__list sub-cat-${header_Concerns_arr[i]} sub-category hide`);
+                }
+            }
+        }
+
+
+        header_Concerns_arr.map((el, index) => {
+            let concern_cat = document.getElementById(`con-${el}`);
+            let concern_product = document.getElementById(`sub-con-${el}`);
+            concern_cat.addEventListener("click", () => {
+                concern_cat.setAttribute("class", "link show");
+                ignore_elem(el)
+                concern_product.setAttribute("class", `header-top__menu__list__product__detail__right__list sub-cat-${el}`);
+            })
+
+        })
+
+        let t = 0;
+
+        let product_div = document.querySelector(".header-top__menu__list__product");
+        let product_a = document.querySelector(".product_a")
+        let product_span = document.querySelector("#product_span");
+
+        let concern_div = document.querySelector(".concern-cat");
+        let concern_a = document.querySelector(".concern_a");
+        let concern_span = document.querySelector("#concern_span");
+
+        let about_div = document.querySelector(".not-close-on-click");
+        let about_a = document.querySelector(".about_a")
+        let about_span = document.querySelector("#about_span");
+
+        product_a.addEventListener("click", () => {
+            if (Math.floor(t % 2) === 0) {
+                t += 1;
+                product_div.setAttribute("class", "header-top__menu__list__product sub-design product-cat show");
+                product_span.style.transform = "translateY(-50%) rotate(-135deg)";
+            } else if (Math.floor(t % 2) !== 0) {
+                t = 0;
+                product_div.setAttribute("class", "header-top__menu__list__product sub-design product-cat");
+                product_span.style.transform = "translateY(-50%) rotate(45deg)";
+            }
+        });
+
+        concern_a.addEventListener("click", () => {
+            if (Math.floor(t % 2) === 0) {
+                t += 1;
+                concern_div.setAttribute("class", "header-top__menu__list__product sub-design product-cat show");
+                concern_span.style.transform = "translateY(-50%) rotate(-135deg)";
+            } else if (Math.floor(t % 2) !== 0) {
+                t = 0;
+                concern_div.setAttribute("class", "header-top__menu__list__product sub-design product-cat");
+                concern_span.style.transform = "translateY(-50%) rotate(45deg)";
+            }
+        });
+
+        about_a.addEventListener("click", () => {
+            if (Math.floor(t % 2) === 0) {
+                t += 1;
+                about_div.setAttribute("class", "header-top__menu__list__product sub-design product-cat show");
+                about_span.style.transform = "translateY(-50%) rotate(-135deg)";
+            } else if (Math.floor(t % 2) !== 0) {
+                t = 0;
+                about_div.setAttribute("class", "header-top__menu__list__product sub-design product-cat");
+                about_span.style.transform = "translateY(-50%) rotate(45deg)";
+            }
+        });
+
+
+        let menu = document.querySelector(".header-top__menu");
+        let dropbtn = document.querySelector(".dropbtn");
+        let close_btn = document.querySelector(".lazy");
+        let bg = document.querySelector(".background_div");
+
+
+        dropbtn.addEventListener("click", () => {
+            document.body.setAttribute("class", "newhome-body menu-open");
+            bg.setAttribute("id", "bg");
+            menu.style.display = "block";
+        })
+
+        close_btn.addEventListener("click", () => {
+            bg.setAttribute("id", "");
+            menu.style.display = "none";
+        })
+
+
+
+
+    })
+</script>
