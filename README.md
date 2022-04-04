@@ -1,8 +1,8 @@
 # breadomasai
 Description
 Producer of personal care products intended to offer assistance in maintaining and grooming beards. The company’s products include beard washes, balm, hair growth oil, serum, face washes, wax, soaps and beard combs among others, thereby enabling consumers to pamper their face mane in a hassle-free manner.
-
-Website: — https://gleeful-torrone-c553f1.netlify.app/fire
+Original Website: - www.beardo.in
+Clone Website: — https://gleeful-torrone-c553f1.netlify.app/fire
 Creators:
 Arshiya Moin | LinkedIn,
 Chakravarthi Pasumarthi | LinkedIn
